@@ -1,0 +1,6 @@
+vhdtdtfi -lib work vga_800x600.vhd -prj ucisw_projekt -o vga_800x600.spl -module vga_800x600 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e vga_800x600.spl C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.sym 
+vhdtdtfi -lib work vga_800x600.vhd -prj ucisw_projekt -o vga_800x600.spl -module vga_800x600 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e vga_800x600.spl C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.sym 
+vhdtdtfi -lib work vga_800x600.vhd -prj ucisw_projekt -o vga_800x600.spl -module vga_800x600 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e vga_800x600.spl C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.sym 

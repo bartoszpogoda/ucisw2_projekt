@@ -1,0 +1,24 @@
+V3 12
+FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf 2018/04/12.10:07:58 P.20131013
+EN work/SCHEME 1523520907 \
+      FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/SCHEME/BEHAVIORAL 1523520908 \
+      FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf \
+      EN work/SCHEME 1523520907 CP vga_800x600 CP vga_pixel
+FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd 2018/04/12.09:52:03 P.20131013
+EN work/vga_800x600 1523520903 \
+      FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/vga_800x600/Behavioral 1523520904 \
+      FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd \
+      EN work/vga_800x600 1523520903
+FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd 2018/04/12.10:14:58 P.20131013
+EN work/vga_pixel 1523520905 \
+      FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/vga_pixel/Behavioral 1523520906 \
+      FL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd \
+      EN work/vga_pixel 1523520905

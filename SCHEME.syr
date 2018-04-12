@@ -1,0 +1,433 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: SCHEME.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SCHEME.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SCHEME"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : SCHEME
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd" in Library work.
+Architecture behavioral of Entity vga_800x600 is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd" in Library work.
+Entity <vga_pixel> compiled.
+Entity <vga_pixel> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf" in Library work.
+Architecture behavioral of Entity scheme is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <SCHEME> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vga_800x600> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vga_pixel> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <SCHEME> in library <work> (Architecture <behavioral>).
+Entity <SCHEME> analyzed. Unit <SCHEME> generated.
+
+Analyzing Entity <vga_800x600> in library <work> (Architecture <behavioral>).
+Entity <vga_800x600> analyzed. Unit <vga_800x600> generated.
+
+Analyzing Entity <vga_pixel> in library <work> (Architecture <behavioral>).
+Entity <vga_pixel> analyzed. Unit <vga_pixel> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vga_800x600>.
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd".
+    Found 11-bit comparator greatequal for signal <h_sync$cmp_ge0000> created at line 76.
+    Found 11-bit comparator less for signal <h_sync$cmp_lt0000> created at line 76.
+    Found 11-bit up counter for signal <hcs>.
+    Found 11-bit comparator greatequal for signal <v_sync$cmp_ge0000> created at line 91.
+    Found 11-bit comparator less for signal <v_sync$cmp_lt0000> created at line 91.
+    Found 11-bit up counter for signal <vcs>.
+    Found 12-bit comparator less for signal <vidon$cmp_lt0000> created at line 94.
+    Found 12-bit comparator less for signal <vidon$cmp_lt0001> created at line 94.
+    Found 1-bit register for signal <vsenable>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vga_800x600> synthesized.
+
+
+Synthesizing Unit <vga_pixel>.
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd".
+    Found 12-bit comparator greater for signal <green_out$cmp_gt0000> created at line 56.
+    Found 12-bit comparator greater for signal <green_out$cmp_gt0001> created at line 57.
+    Found 12-bit comparator less for signal <green_out$cmp_lt0000> created at line 56.
+    Found 12-bit comparator less for signal <green_out$cmp_lt0001> created at line 57.
+    Summary:
+	inferred   4 Comparator(s).
+Unit <vga_pixel> synthesized.
+
+
+Synthesizing Unit <SCHEME>.
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf".
+WARNING:Xst:653 - Signal <led_DUMMY<7:1>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000.
+Unit <SCHEME> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 11-bit up counter                                     : 2
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Comparators                                          : 10
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 2
+ 12-bit comparator greater                             : 2
+ 12-bit comparator less                                : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 11-bit up counter                                     : 2
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Comparators                                          : 10
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 2
+ 12-bit comparator greater                             : 2
+ 12-bit comparator less                                : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <SCHEME> ...
+
+Optimizing unit <vga_800x600> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SCHEME, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : SCHEME.ngr
+Top Level Output File Name         : SCHEME
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 159
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 27
+#      LUT2                        : 9
+#      LUT3                        : 3
+#      LUT3_D                      : 2
+#      LUT4                        : 38
+#      LUT4_D                      : 4
+#      MUXCY                       : 44
+#      VCC                         : 1
+#      XORCY                       : 22
+# FlipFlops/Latches                : 23
+#      FDC                         : 11
+#      FDCE                        : 11
+#      FDE                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 1
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       50  out of   4656     1%  
+ Number of Slice Flip Flops:             23  out of   9312     0%  
+ Number of 4 input LUTs:                 91  out of   9312     0%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_50MHz                          | BUFGP                  | 23    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+btn_south                          | IBUF                   | 22    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.571ns (Maximum Frequency: 218.768MHz)
+   Minimum input arrival time before clock: 3.580ns
+   Maximum output required time after clock: 8.457ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_50MHz'
+  Clock period: 4.571ns (frequency: 218.768MHz)
+  Total number of paths / destination ports: 396 / 34
+-------------------------------------------------------------------------
+Delay:               4.571ns (Levels of Logic = 12)
+  Source:            XLXI_5/vcs_1 (FF)
+  Destination:       XLXI_5/vcs_10 (FF)
+  Source Clock:      Clk_50MHz rising
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: XLXI_5/vcs_1 to XLXI_5/vcs_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.514   0.690  XLXI_5/vcs_1 (XLXI_5/vcs_1)
+     LUT1:I0->O            1   0.612   0.000  XLXI_5/Mcount_vcs_cy<1>_rt (XLXI_5/Mcount_vcs_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcount_vcs_cy<1> (XLXI_5/Mcount_vcs_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<2> (XLXI_5/Mcount_vcs_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<3> (XLXI_5/Mcount_vcs_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<4> (XLXI_5/Mcount_vcs_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<5> (XLXI_5/Mcount_vcs_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<6> (XLXI_5/Mcount_vcs_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<7> (XLXI_5/Mcount_vcs_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<8> (XLXI_5/Mcount_vcs_cy<8>)
+     MUXCY:CI->O           0   0.051   0.000  XLXI_5/Mcount_vcs_cy<9> (XLXI_5/Mcount_vcs_cy<9>)
+     XORCY:CI->O           1   0.699   0.360  XLXI_5/Mcount_vcs_xor<10> (XLXI_5/Result<10>)
+     LUT4:I3->O            1   0.612   0.000  XLXI_5/Mcount_vcs_eqn_101 (XLXI_5/Mcount_vcs_eqn_10)
+     FDCE:D                    0.268          XLXI_5/vcs_10
+    ----------------------------------------
+    Total                      4.571ns (3.521ns logic, 1.050ns route)
+                                       (77.0% logic, 23.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.580ns (Levels of Logic = 2)
+  Source:            btn_south (PAD)
+  Destination:       XLXI_5/vsenable (FF)
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: btn_south to XLXI_5/vsenable
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   1.106   1.022  btn_south_IBUF (btn_south_IBUF)
+     INV:I->O              1   0.612   0.357  XLXI_5/clr_inv1_INV_0 (XLXI_5/clr_inv)
+     FDE:CE                    0.483          XLXI_5/vsenable
+    ----------------------------------------
+    Total                      3.580ns (2.201ns logic, 1.379ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 97 / 4
+-------------------------------------------------------------------------
+Offset:              8.457ns (Levels of Logic = 5)
+  Source:            XLXI_5/hcs_3 (FF)
+  Destination:       VGA_G (PAD)
+  Source Clock:      Clk_50MHz rising
+
+  Data Path: XLXI_5/hcs_3 to VGA_G
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.514   0.651  XLXI_5/hcs_3 (XLXI_5/hcs_3)
+     LUT2:I0->O            2   0.612   0.449  XLXI_6/Mcompar_green_out_cmp_gt0000_lut<2> (XLXI_6/Mcompar_green_out_cmp_gt0000_lut<2>)
+     LUT4:I1->O            1   0.612   0.509  XLXI_6/green_out18 (XLXI_6/green_out18)
+     LUT4:I0->O            1   0.612   0.360  XLXI_6/green_out114_SW0 (N6)
+     LUT4:I3->O            1   0.612   0.357  XLXI_6/green_out114 (VGA_G_OBUF)
+     OBUF:I->O                 3.169          VGA_G_OBUF (VGA_G)
+    ----------------------------------------
+    Total                      8.457ns (6.131ns logic, 2.326ns route)
+                                       (72.5% logic, 27.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.65 secs
+ 
+--> 
+
+Total memory usage is 206192 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

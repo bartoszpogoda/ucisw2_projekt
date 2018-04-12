@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.xst" -ofn "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 SCHEME.ngc SCHEME.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o SCHEME_map.ncd SCHEME.ngd SCHEME.pcf 
+par -w -intstyle ise -ol high -t 1 SCHEME_map.ncd SCHEME.ncd SCHEME.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SCHEME.twx SCHEME.ncd -o SCHEME.twr SCHEME.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f SCHEME.ut SCHEME.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.xst" -ofn "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 SCHEME.ngc SCHEME.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o SCHEME_map.ncd SCHEME.ngd SCHEME.pcf 
+par -w -intstyle ise -ol high -t 1 SCHEME_map.ncd SCHEME.ncd SCHEME.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SCHEME.twx SCHEME.ncd -o SCHEME.twr SCHEME.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f SCHEME.ut SCHEME.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.xst" -ofn "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 SCHEME.ngc SCHEME.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o SCHEME_map.ncd SCHEME.ngd SCHEME.pcf 
+par -w -intstyle ise -ol high -t 1 SCHEME_map.ncd SCHEME.ncd SCHEME.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SCHEME.twx SCHEME.ncd -o SCHEME.twr SCHEME.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f SCHEME.ut SCHEME.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.xst" -ofn "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 SCHEME.ngc SCHEME.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o SCHEME_map.ncd SCHEME.ngd SCHEME.pcf 
+par -w -intstyle ise -ol high -t 1 SCHEME_map.ncd SCHEME.ncd SCHEME.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SCHEME.twx SCHEME.ncd -o SCHEME.twr SCHEME.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f SCHEME.ut SCHEME.ncd 

@@ -1,0 +1,10 @@
+[Inputs]
+clk50
+clr
+[Outputs]
+h_sync
+v_sync
+vidon
+=h_counter[10:0]=
+=v_counter[10:0]=
+[BiDir]

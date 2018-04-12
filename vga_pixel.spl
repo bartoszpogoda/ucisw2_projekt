@@ -1,0 +1,9 @@
+[Inputs]
+vidon
+=h_counter[10:0]=
+=v_counter[10:0]=
+[Outputs]
+red_out
+green_out
+blue_out
+[BiDir]

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_controller_test_isim_beh.exe" -prj "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_controller_test_beh.prj" "work.vga_controller_test" 

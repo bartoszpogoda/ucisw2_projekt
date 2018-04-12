@@ -1,0 +1,2 @@
+vhdl work "vga_800x600.vhd"
+vhdl work "vga_controller_test.vhd"

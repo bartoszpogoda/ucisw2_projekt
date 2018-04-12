@@ -1,0 +1,6 @@
+AR vga_800x600 behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd sub00/vhpl01 1523520904
+EN scheme NULL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf sub00/vhpl04 1523520907
+AR scheme behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf sub00/vhpl05 1523520908
+EN vga_800x600 NULL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd sub00/vhpl00 1523520903
+AR vga_pixel behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd sub00/vhpl03 1523520906
+EN vga_pixel NULL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd sub00/vhpl02 1523520905
