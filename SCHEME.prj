@@ -1,3 +1,4 @@
 vhdl work "vga_pixel.vhd"
 vhdl work "vga_800x600.vhd"
+vhdl work "player_movement.vhd"
 vhdl work "SCHEME.vhf"

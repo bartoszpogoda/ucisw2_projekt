@@ -1,6 +1,8 @@
-AR vga_800x600 behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd sub00/vhpl01 1523520904
-EN scheme NULL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf sub00/vhpl04 1523520907
-AR scheme behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf sub00/vhpl05 1523520908
-EN vga_800x600 NULL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd sub00/vhpl00 1523520903
-AR vga_pixel behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd sub00/vhpl03 1523520906
-EN vga_pixel NULL C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd sub00/vhpl02 1523520905
+AR player_movement behavioral C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/player_movement.vhd sub00/vhpl03 1524732736
+AR vga_800x600 behavioral C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_800x600.vhd sub00/vhpl01 1524732734
+EN scheme NULL C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf sub00/vhpl06 1524732739
+AR scheme behavioral C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf sub00/vhpl07 1524732740
+EN vga_800x600 NULL C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_800x600.vhd sub00/vhpl00 1524732733
+AR vga_pixel behavioral C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd sub00/vhpl05 1524732738
+EN player_movement NULL C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/player_movement.vhd sub00/vhpl02 1524732735
+EN vga_pixel NULL C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd sub00/vhpl04 1524732737

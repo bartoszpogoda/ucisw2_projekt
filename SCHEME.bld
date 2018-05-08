@@ -6,8 +6,9 @@ ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-5 SCHEME.ngc
 SCHEME.ngd
 
 Reading NGO file
-"C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.ngc"
-...
+"C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.ngc" ...
+Loading design module
+"C:\Users\lab\Desktop\ucisw2_projekt-mouse-integration/PS2_Mouse.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -33,7 +34,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 114512 kilobytes
+Total memory usage is 115088 kilobytes
 
 Writing NGD file "SCHEME.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

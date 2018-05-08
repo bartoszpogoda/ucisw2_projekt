@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: SCHEME.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -104,12 +104,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_800x600.vhd" in Library work.
 Architecture behavioral of Entity vga_800x600 is up to date.
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd" in Library work.
-Entity <vga_pixel> compiled.
-Entity <vga_pixel> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/player_movement.vhd" in Library work.
+Architecture behavioral of Entity player_movement is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd" in Library work.
+Architecture behavioral of Entity vga_pixel is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf" in Library work.
 Architecture behavioral of Entity scheme is up to date.
 
 =========================================================================
@@ -119,6 +120,8 @@ Analyzing hierarchy for entity <SCHEME> in library <work> (architecture <behavio
 
 Analyzing hierarchy for entity <vga_800x600> in library <work> (architecture <behavioral>).
 
+Analyzing hierarchy for entity <player_movement> in library <work> (architecture <behavioral>).
+
 Analyzing hierarchy for entity <vga_pixel> in library <work> (architecture <behavioral>).
 
 
@@ -126,12 +129,21 @@ Analyzing hierarchy for entity <vga_pixel> in library <work> (architecture <beha
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <SCHEME> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf" line 125: Unconnected output port 'InitOK' of component 'PS2_Mouse'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf" line 125: Instantiating black box module <PS2_Mouse>.
 Entity <SCHEME> analyzed. Unit <SCHEME> generated.
 
 Analyzing Entity <vga_800x600> in library <work> (Architecture <behavioral>).
 Entity <vga_800x600> analyzed. Unit <vga_800x600> generated.
 
+Analyzing Entity <player_movement> in library <work> (Architecture <behavioral>).
+Entity <player_movement> analyzed. Unit <player_movement> generated.
+
 Analyzing Entity <vga_pixel> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd" line 89: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <enemies<0>.X>, <enemies<0>.Y>, <enemies<0>.X_velocity>, <enemies<0>.Y_velocity>, <enemies<0>.width>, <enemies<0>.height>, <enemies<1>.X>, <enemies<1>.Y>, <enemies<1>.X_velocity>, <enemies<1>.Y_velocity>, <enemies<1>.width>, <enemies<1>.height>
+WARNING:Xst:819 - "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd" line 155: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <clk50>
 Entity <vga_pixel> analyzed. Unit <vga_pixel> generated.
 
 
@@ -142,7 +154,7 @@ Entity <vga_pixel> analyzed. Unit <vga_pixel> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <vga_800x600>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_800x600.vhd".
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_800x600.vhd".
     Found 11-bit comparator greatequal for signal <h_sync$cmp_ge0000> created at line 76.
     Found 11-bit comparator less for signal <h_sync$cmp_lt0000> created at line 76.
     Found 11-bit up counter for signal <hcs>.
@@ -159,20 +171,69 @@ Synthesizing Unit <vga_800x600>.
 Unit <vga_800x600> synthesized.
 
 
-Synthesizing Unit <vga_pixel>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_pixel.vhd".
-    Found 12-bit comparator greater for signal <green_out$cmp_gt0000> created at line 56.
-    Found 12-bit comparator greater for signal <green_out$cmp_gt0001> created at line 57.
-    Found 12-bit comparator less for signal <green_out$cmp_lt0000> created at line 56.
-    Found 12-bit comparator less for signal <green_out$cmp_lt0001> created at line 57.
+Synthesizing Unit <player_movement>.
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/player_movement.vhd".
+WARNING:Xst:647 - Input <B1_Status<7:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <in_player_action>.
+    Found 11-bit register for signal <in_player_x>.
+    Found 11-bit adder for signal <in_player_x$addsub0000> created at line 59.
+    Found 11-bit comparator greater for signal <in_player_x$cmp_gt0000> created at line 64.
+    Found 11-bit comparator less for signal <in_player_x$cmp_lt0000> created at line 63.
+    Found 11-bit register for signal <in_player_y>.
+    Found 11-bit subtractor for signal <in_player_y$addsub0000> created at line 60.
+    Found 11-bit comparator greater for signal <in_player_y$cmp_gt0000> created at line 71.
+    Found 11-bit comparator less for signal <in_player_y$cmp_lt0000> created at line 70.
     Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
+Unit <player_movement> synthesized.
+
+
+Synthesizing Unit <vga_pixel>.
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd".
+WARNING:Xst:653 - Signal <enemies<1>.width> is used but never assigned. This sourceless signal will be automatically connected to value 00000001010.
+WARNING:Xst:653 - Signal <enemies<1>.height> is used but never assigned. This sourceless signal will be automatically connected to value 00000001010.
+WARNING:Xst:653 - Signal <enemies<1>.Y_velocity> is used but never assigned. This sourceless signal will be automatically connected to value 0010.
+WARNING:Xst:653 - Signal <enemies<1>.X_velocity> is used but never assigned. This sourceless signal will be automatically connected to value 0010.
+WARNING:Xst:653 - Signal <enemies<0>.width> is used but never assigned. This sourceless signal will be automatically connected to value 00000001010.
+WARNING:Xst:653 - Signal <enemies<0>.height> is used but never assigned. This sourceless signal will be automatically connected to value 00000001010.
+WARNING:Xst:653 - Signal <enemies<0>.Y_velocity> is used but never assigned. This sourceless signal will be automatically connected to value 0010.
+WARNING:Xst:653 - Signal <enemies<0>.X_velocity> is used but never assigned. This sourceless signal will be automatically connected to value 0010.
+WARNING:Xst:737 - Found 1-bit latch for signal <red_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit up accumulator for signal <enemies<0>.X>.
+    Found 10-bit up accumulator for signal <enemies<0>.Y>.
+    Found 10-bit up accumulator for signal <enemies<1>.X>.
+    Found 10-bit up accumulator for signal <enemies<1>.Y>.
+    Found 11-bit adder for signal <in_blue_out$addsub0000> created at line 135.
+    Found 11-bit adder for signal <in_blue_out$addsub0001> created at line 136.
+    Found 11-bit adder for signal <in_blue_out$addsub0002> created at line 135.
+    Found 11-bit adder for signal <in_blue_out$addsub0003> created at line 136.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0000> created at line 135.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0001> created at line 135.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0002> created at line 136.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0003> created at line 136.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0000> created at line 135.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0001> created at line 135.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0002> created at line 136.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0003> created at line 136.
+    Found 11-bit adder for signal <in_green_out$add0000> created at line 99.
+    Found 11-bit adder for signal <in_green_out$add0001> created at line 100.
+    Found 11-bit comparator greater for signal <in_green_out$cmp_gt0000> created at line 99.
+    Found 11-bit comparator greater for signal <in_green_out$cmp_gt0001> created at line 100.
+    Found 11-bit comparator less for signal <in_green_out$cmp_lt0000> created at line 99.
+    Found 11-bit comparator less for signal <in_green_out$cmp_lt0001> created at line 100.
+    Summary:
+	inferred   4 Accumulator(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
 Unit <vga_pixel> synthesized.
 
 
 Synthesizing Unit <SCHEME>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/SCHEME.vhf".
-WARNING:Xst:653 - Signal <led_DUMMY<7:1>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000.
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf".
 Unit <SCHEME> synthesized.
 
 
@@ -180,15 +241,23 @@ Unit <SCHEME> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
+# Adders/Subtractors                                   : 8
+ 11-bit adder                                          : 7
+ 11-bit subtractor                                     : 1
 # Counters                                             : 2
  11-bit up counter                                     : 2
-# Registers                                            : 1
- 1-bit register                                        : 1
-# Comparators                                          : 10
+# Accumulators                                         : 4
+ 10-bit up accumulator                                 : 4
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 11-bit register                                       : 2
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Comparators                                          : 22
  11-bit comparator greatequal                          : 2
- 11-bit comparator less                                : 2
- 12-bit comparator greater                             : 2
- 12-bit comparator less                                : 4
+ 11-bit comparator greater                             : 8
+ 11-bit comparator less                                : 10
+ 12-bit comparator less                                : 2
 
 =========================================================================
 
@@ -196,34 +265,49 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Reading core <PS2_Mouse.ngc>.
+Loading core <PS2_Mouse> for timing and area information for instance <XLXI_10>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# Adders/Subtractors                                   : 8
+ 11-bit adder                                          : 7
+ 11-bit subtractor                                     : 1
 # Counters                                             : 2
  11-bit up counter                                     : 2
-# Registers                                            : 1
- Flip-Flops                                            : 1
-# Comparators                                          : 10
+# Accumulators                                         : 4
+ 10-bit up accumulator                                 : 4
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Comparators                                          : 22
  11-bit comparator greatequal                          : 2
- 11-bit comparator less                                : 2
- 12-bit comparator greater                             : 2
- 12-bit comparator less                                : 4
+ 11-bit comparator greater                             : 8
+ 11-bit comparator less                                : 10
+ 12-bit comparator less                                : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2146 - In block <vga_pixel>, Accumulator <enemies<0>.X> <enemies<1>.X> <enemies<1>.Y> <enemies<0>.Y> are equivalent, XST will keep only <enemies<0>.X>.
+WARNING:Xst:1293 - FF/Latch <enemies<0>.X_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <SCHEME> ...
 
 Optimizing unit <vga_800x600> ...
 
+Optimizing unit <player_movement> ...
+
+Optimizing unit <vga_pixel> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block SCHEME, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block SCHEME, actual ratio is 5.
 
 Final Macro Processing ...
 
@@ -231,8 +315,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 23
- Flip-Flops                                            : 23
+# Registers                                            : 55
+ Flip-Flops                                            : 55
 
 =========================================================================
 
@@ -258,30 +342,43 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 15
+# IOs                              : 9
 
 Cell Usage :
-# BELS                             : 159
-#      GND                         : 1
-#      INV                         : 8
-#      LUT1                        : 27
-#      LUT2                        : 9
-#      LUT3                        : 3
+# BELS                             : 802
+#      GND                         : 2
+#      INV                         : 41
+#      LUT1                        : 88
+#      LUT2                        : 166
+#      LUT2_L                      : 1
+#      LUT3                        : 38
 #      LUT3_D                      : 2
-#      LUT4                        : 38
-#      LUT4_D                      : 4
-#      MUXCY                       : 44
-#      VCC                         : 1
-#      XORCY                       : 22
-# FlipFlops/Latches                : 23
+#      LUT4                        : 54
+#      LUT4_D                      : 11
+#      LUT4_L                      : 3
+#      MUXCY                       : 273
+#      VCC                         : 2
+#      XORCY                       : 121
+# FlipFlops/Latches                : 137
+#      FD                          : 11
 #      FDC                         : 11
 #      FDCE                        : 11
-#      FDE                         : 1
+#      FDE                         : 70
+#      FDR                         : 4
+#      FDRE                        : 16
+#      FDRS                        : 3
+#      FDRSE                       : 1
+#      FDS                         : 1
+#      FDSE                        : 6
+#      LD                          : 3
+# Shift Registers                  : 1
+#      SRL16E                      : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 14
+# IO Buffers                       : 8
 #      IBUF                        : 1
-#      OBUF                        : 13
+#      IOBUF                       : 2
+#      OBUF                        : 5
 =========================================================================
 
 Device utilization summary:
@@ -289,11 +386,14 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       50  out of   4656     1%  
- Number of Slice Flip Flops:             23  out of   9312     0%  
- Number of 4 input LUTs:                 91  out of   9312     0%  
- Number of IOs:                          15
- Number of bonded IOBs:                  15  out of    232     6%  
+ Number of Slices:                      237  out of   4656     5%  
+ Number of Slice Flip Flops:            134  out of   9312     1%  
+ Number of 4 input LUTs:                405  out of   9312     4%  
+    Number used as logic:               404
+    Number used as Shift registers:       1
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    232     3%  
+    IOB Flip Flops:                       3
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -314,11 +414,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-Clk_50MHz                          | BUFGP                  | 23    |
------------------------------------+------------------------+-------+
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+Clk_50MHz                          | BUFGP                   | 135   |
+XLXN_5(XLXI_5/vidon_and000068:O)   | NONE(*)(XLXI_13/red_out)| 3     |
+-----------------------------------+-------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -332,9 +437,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 4.571ns (Maximum Frequency: 218.768MHz)
-   Minimum input arrival time before clock: 3.580ns
-   Maximum output required time after clock: 8.457ns
+   Minimum period: 5.334ns (Maximum Frequency: 187.477MHz)
+   Minimum input arrival time before clock: 3.631ns
+   Maximum output required time after clock: 7.802ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -343,42 +448,39 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 4.571ns (frequency: 218.768MHz)
-  Total number of paths / destination ports: 396 / 34
+  Clock period: 5.334ns (frequency: 187.477MHz)
+  Total number of paths / destination ports: 2145 / 257
 -------------------------------------------------------------------------
-Delay:               4.571ns (Levels of Logic = 12)
-  Source:            XLXI_5/vcs_1 (FF)
-  Destination:       XLXI_5/vcs_10 (FF)
+Delay:               5.334ns (Levels of Logic = 9)
+  Source:            XLXI_5/vcs_0 (FF)
+  Destination:       XLXI_13/enemies<0>.X_9 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_5/vcs_1 to XLXI_5/vcs_10
+  Data Path: XLXI_5/vcs_0 to XLXI_13/enemies<0>.X_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             5   0.514   0.690  XLXI_5/vcs_1 (XLXI_5/vcs_1)
-     LUT1:I0->O            1   0.612   0.000  XLXI_5/Mcount_vcs_cy<1>_rt (XLXI_5/Mcount_vcs_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcount_vcs_cy<1> (XLXI_5/Mcount_vcs_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<2> (XLXI_5/Mcount_vcs_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<3> (XLXI_5/Mcount_vcs_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<4> (XLXI_5/Mcount_vcs_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<5> (XLXI_5/Mcount_vcs_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<6> (XLXI_5/Mcount_vcs_cy<6>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<7> (XLXI_5/Mcount_vcs_cy<7>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcount_vcs_cy<8> (XLXI_5/Mcount_vcs_cy<8>)
-     MUXCY:CI->O           0   0.051   0.000  XLXI_5/Mcount_vcs_cy<9> (XLXI_5/Mcount_vcs_cy<9>)
-     XORCY:CI->O           1   0.699   0.360  XLXI_5/Mcount_vcs_xor<10> (XLXI_5/Result<10>)
-     LUT4:I3->O            1   0.612   0.000  XLXI_5/Mcount_vcs_eqn_101 (XLXI_5/Mcount_vcs_eqn_10)
-     FDCE:D                    0.268          XLXI_5/vcs_10
+     FDCE:C->Q            11   0.514   0.945  XLXI_5/vcs_0 (XLXI_5/vcs_0)
+     LUT1:I0->O            1   0.612   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_rt (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           2   0.399   0.410  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6> (XLXI_5/v_sync_cmp_ge0000)
+     LUT4:I2->O            9   0.612   0.697  XLXI_13/enemies<1>_X_and000041 (XLXI_13/enemies<1>_X_and0000)
+     FDE:CE                    0.483          XLXI_13/enemies<0>.X_1
     ----------------------------------------
-    Total                      4.571ns (3.521ns logic, 1.050ns route)
-                                       (77.0% logic, 23.0% route)
+    Total                      5.334ns (3.282ns logic, 2.052ns route)
+                                       (61.5% logic, 38.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 11 / 11
 -------------------------------------------------------------------------
-Offset:              3.580ns (Levels of Logic = 2)
+Offset:              3.631ns (Levels of Logic = 2)
   Source:            btn_south (PAD)
   Destination:       XLXI_5/vsenable (FF)
   Destination Clock: Clk_50MHz rising
@@ -387,47 +489,71 @@ Offset:              3.580ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            23   1.106   1.022  btn_south_IBUF (btn_south_IBUF)
+     IBUF:I->O            33   1.106   1.073  btn_south_IBUF (btn_south_IBUF)
      INV:I->O              1   0.612   0.357  XLXI_5/clr_inv1_INV_0 (XLXI_5/clr_inv)
      FDE:CE                    0.483          XLXI_5/vsenable
     ----------------------------------------
-    Total                      3.580ns (2.201ns logic, 1.379ns route)
-                                       (61.5% logic, 38.5% route)
+    Total                      3.631ns (2.201ns logic, 1.430ns route)
+                                       (60.6% logic, 39.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 97 / 4
+  Total number of paths / destination ports: 34 / 4
 -------------------------------------------------------------------------
-Offset:              8.457ns (Levels of Logic = 5)
-  Source:            XLXI_5/hcs_3 (FF)
-  Destination:       VGA_G (PAD)
+Offset:              7.802ns (Levels of Logic = 10)
+  Source:            XLXI_5/vcs_0 (FF)
+  Destination:       VGA_VS (PAD)
   Source Clock:      Clk_50MHz rising
 
-  Data Path: XLXI_5/hcs_3 to VGA_G
+  Data Path: XLXI_5/vcs_0 to VGA_VS
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              4   0.514   0.651  XLXI_5/hcs_3 (XLXI_5/hcs_3)
-     LUT2:I0->O            2   0.612   0.449  XLXI_6/Mcompar_green_out_cmp_gt0000_lut<2> (XLXI_6/Mcompar_green_out_cmp_gt0000_lut<2>)
-     LUT4:I1->O            1   0.612   0.509  XLXI_6/green_out18 (XLXI_6/green_out18)
-     LUT4:I0->O            1   0.612   0.360  XLXI_6/green_out114_SW0 (N6)
-     LUT4:I3->O            1   0.612   0.357  XLXI_6/green_out114 (VGA_G_OBUF)
-     OBUF:I->O                 3.169          VGA_G_OBUF (VGA_G)
+     FDCE:C->Q            11   0.514   0.945  XLXI_5/vcs_0 (XLXI_5/vcs_0)
+     LUT2:I0->O            1   0.612   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<0> (XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>1)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1>1)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>1)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>1)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>1)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>1)
+     MUXCY:CI->O           2   0.399   0.532  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>)
+     LUT2:I0->O            1   0.612   0.357  XLXI_5/v_sync1 (VGA_VS_OBUF)
+     OBUF:I->O                 3.169          VGA_VS_OBUF (VGA_VS)
     ----------------------------------------
-    Total                      8.457ns (6.131ns logic, 2.326ns route)
-                                       (72.5% logic, 27.5% route)
+    Total                      7.802ns (5.968ns logic, 1.834ns route)
+                                       (76.5% logic, 23.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_5'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.114ns (Levels of Logic = 1)
+  Source:            XLXI_13/blue_out (LATCH)
+  Destination:       VGA_B (PAD)
+  Source Clock:      XLXN_5 falling
+
+  Data Path: XLXI_13/blue_out to VGA_B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.588   0.357  XLXI_13/blue_out (XLXI_13/blue_out)
+     OBUF:I->O                 3.169          VGA_B_OBUF (VGA_B)
+    ----------------------------------------
+    Total                      4.114ns (3.757ns logic, 0.357ns route)
+                                       (91.3% logic, 8.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.65 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.46 secs
  
 --> 
 
-Total memory usage is 206192 kilobytes
+Total memory usage is 218224 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 
