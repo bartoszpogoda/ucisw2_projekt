@@ -12,3 +12,7 @@ vhdtdtfi -lib work vga_pixel.vhd -prj ucisw_projekt -o vga_pixel.spl -module vga
 spl2sym -intstyle ise -family spartan3e vga_pixel.spl C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.sym 
 vhdtdtfi -lib work vga_pixel.vhd -prj ucisw_projekt -o vga_pixel.spl -module vga_pixel -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e vga_pixel.spl C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.sym 
+vhdtdtfi -lib work vga_pixel.vhd -prj ucisw_projekt -o vga_pixel.spl -module vga_pixel -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e vga_pixel.spl C:/Users/lab/Desktop/ucisw2_projekt-master/vga_pixel.sym 
+vhdtdtfi -lib work vga_pixel.vhd -prj ucisw_projekt -o vga_pixel.spl -module vga_pixel -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e vga_pixel.spl C:/Users/lab/Desktop/ucisw2_projekt-master/vga_pixel.sym 

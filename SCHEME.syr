@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: SCHEME.prj
 
@@ -104,13 +104,14 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_800x600.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/vga_800x600.vhd" in Library work.
 Architecture behavioral of Entity vga_800x600 is up to date.
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/player_movement.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/player_movement.vhd" in Library work.
 Architecture behavioral of Entity player_movement is up to date.
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd" in Library work.
-Architecture behavioral of Entity vga_pixel is up to date.
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/vga_pixel.vhd" in Library work.
+Entity <vga_pixel> compiled.
+Entity <vga_pixel> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master/SCHEME.vhf" in Library work.
 Architecture behavioral of Entity scheme is up to date.
 
 =========================================================================
@@ -129,8 +130,8 @@ Analyzing hierarchy for entity <vga_pixel> in library <work> (architecture <beha
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <SCHEME> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf" line 125: Unconnected output port 'InitOK' of component 'PS2_Mouse'.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf" line 125: Instantiating black box module <PS2_Mouse>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/ucisw2_projekt-master/SCHEME.vhf" line 116: Unconnected output port 'InitOK' of component 'PS2_Mouse'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/ucisw2_projekt-master/SCHEME.vhf" line 116: Instantiating black box module <PS2_Mouse>.
 Entity <SCHEME> analyzed. Unit <SCHEME> generated.
 
 Analyzing Entity <vga_800x600> in library <work> (Architecture <behavioral>).
@@ -140,10 +141,6 @@ Analyzing Entity <player_movement> in library <work> (Architecture <behavioral>)
 Entity <player_movement> analyzed. Unit <player_movement> generated.
 
 Analyzing Entity <vga_pixel> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd" line 89: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <enemies<0>.X>, <enemies<0>.Y>, <enemies<0>.X_velocity>, <enemies<0>.Y_velocity>, <enemies<0>.width>, <enemies<0>.height>, <enemies<1>.X>, <enemies<1>.Y>, <enemies<1>.X_velocity>, <enemies<1>.Y_velocity>, <enemies<1>.width>, <enemies<1>.height>
-WARNING:Xst:819 - "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd" line 155: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <clk50>
 Entity <vga_pixel> analyzed. Unit <vga_pixel> generated.
 
 
@@ -154,7 +151,7 @@ Entity <vga_pixel> analyzed. Unit <vga_pixel> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <vga_800x600>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_800x600.vhd".
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/vga_800x600.vhd".
     Found 11-bit comparator greatequal for signal <h_sync$cmp_ge0000> created at line 76.
     Found 11-bit comparator less for signal <h_sync$cmp_lt0000> created at line 76.
     Found 11-bit up counter for signal <hcs>.
@@ -172,92 +169,150 @@ Unit <vga_800x600> synthesized.
 
 
 Synthesizing Unit <player_movement>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/player_movement.vhd".
-WARNING:Xst:647 - Input <B1_Status<7:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit register for signal <in_player_action>.
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/player_movement.vhd".
+WARNING:Xst:647 - Input <B1_Status<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 3-bit register for signal <in_player_action>.
     Found 11-bit register for signal <in_player_x>.
-    Found 11-bit adder for signal <in_player_x$addsub0000> created at line 59.
-    Found 11-bit comparator greater for signal <in_player_x$cmp_gt0000> created at line 64.
-    Found 11-bit comparator less for signal <in_player_x$cmp_lt0000> created at line 63.
+    Found 11-bit comparator greater for signal <in_player_x$cmp_gt0000> created at line 68.
+    Found 11-bit comparator less for signal <in_player_x$cmp_lt0000> created at line 67.
+    Found 11-bit addsub for signal <in_player_x$share0000>.
     Found 11-bit register for signal <in_player_y>.
-    Found 11-bit subtractor for signal <in_player_y$addsub0000> created at line 60.
-    Found 11-bit comparator greater for signal <in_player_y$cmp_gt0000> created at line 71.
-    Found 11-bit comparator less for signal <in_player_y$cmp_lt0000> created at line 70.
+    Found 11-bit subtractor for signal <in_player_y$addsub0000>.
+    Found 11-bit comparator greater for signal <in_player_y$cmp_gt0000> created at line 75.
+    Found 11-bit comparator less for signal <in_player_y$cmp_lt0000> created at line 74.
     Summary:
-	inferred  23 D-type flip-flop(s).
+	inferred  25 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
 Unit <player_movement> synthesized.
 
 
 Synthesizing Unit <vga_pixel>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/vga_pixel.vhd".
-WARNING:Xst:653 - Signal <enemies<1>.width> is used but never assigned. This sourceless signal will be automatically connected to value 00000001010.
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/vga_pixel.vhd".
+WARNING:Xst:647 - Input <player_action> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <game_state.IS_PLAYER_COLLISION> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <enemies<1>.width> is used but never assigned. This sourceless signal will be automatically connected to value 00000001100.
 WARNING:Xst:653 - Signal <enemies<1>.height> is used but never assigned. This sourceless signal will be automatically connected to value 00000001010.
-WARNING:Xst:653 - Signal <enemies<1>.Y_velocity> is used but never assigned. This sourceless signal will be automatically connected to value 0010.
-WARNING:Xst:653 - Signal <enemies<1>.X_velocity> is used but never assigned. This sourceless signal will be automatically connected to value 0010.
 WARNING:Xst:653 - Signal <enemies<0>.width> is used but never assigned. This sourceless signal will be automatically connected to value 00000001010.
 WARNING:Xst:653 - Signal <enemies<0>.height> is used but never assigned. This sourceless signal will be automatically connected to value 00000001010.
-WARNING:Xst:653 - Signal <enemies<0>.Y_velocity> is used but never assigned. This sourceless signal will be automatically connected to value 0010.
-WARNING:Xst:653 - Signal <enemies<0>.X_velocity> is used but never assigned. This sourceless signal will be automatically connected to value 0010.
-WARNING:Xst:737 - Found 1-bit latch for signal <red_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <blue_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <green_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 10-bit up accumulator for signal <enemies<0>.X>.
-    Found 10-bit up accumulator for signal <enemies<0>.Y>.
-    Found 10-bit up accumulator for signal <enemies<1>.X>.
-    Found 10-bit up accumulator for signal <enemies<1>.Y>.
-    Found 11-bit adder for signal <in_blue_out$addsub0000> created at line 135.
-    Found 11-bit adder for signal <in_blue_out$addsub0001> created at line 136.
-    Found 11-bit adder for signal <in_blue_out$addsub0002> created at line 135.
-    Found 11-bit adder for signal <in_blue_out$addsub0003> created at line 136.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0000> created at line 135.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0001> created at line 135.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0002> created at line 136.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0003> created at line 136.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0000> created at line 135.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0001> created at line 135.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0002> created at line 136.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0003> created at line 136.
-    Found 11-bit adder for signal <in_green_out$add0000> created at line 99.
-    Found 11-bit adder for signal <in_green_out$add0001> created at line 100.
-    Found 11-bit comparator greater for signal <in_green_out$cmp_gt0000> created at line 99.
-    Found 11-bit comparator greater for signal <in_green_out$cmp_gt0001> created at line 100.
-    Found 11-bit comparator less for signal <in_green_out$cmp_lt0000> created at line 99.
-    Found 11-bit comparator less for signal <in_green_out$cmp_lt0001> created at line 100.
+    Found 1-bit register for signal <blue_out>.
+    Found 1-bit register for signal <red_out>.
+    Found 1-bit register for signal <green_out>.
+    Found 11-bit adder for signal <and0000_0$add0000> created at line 255.
+    Found 11-bit comparator greater for signal <and0000_0$cmp_gt0000> created at line 111.
+    Found 11-bit comparator less for signal <and0000_0$cmp_lt0000> created at line 111.
+    Found 11-bit adder for signal <and0001_0$addsub0000> created at line 255.
+    Found 11-bit comparator greater for signal <and0001_0$cmp_gt0000> created at line 111.
+    Found 11-bit comparator less for signal <and0001_0$cmp_lt0000> created at line 111.
+    Found 11-bit adder for signal <and0002_0$add0000> created at line 255.
+    Found 11-bit comparator greater for signal <and0002_0$cmp_gt0000> created at line 111.
+    Found 11-bit comparator less for signal <and0002_0$cmp_lt0000> created at line 111.
+    Found 11-bit adder for signal <and0003_0$addsub0000> created at line 255.
+    Found 11-bit comparator greater for signal <and0003_0$cmp_gt0000> created at line 111.
+    Found 11-bit comparator less for signal <and0003_0$cmp_lt0000> created at line 111.
+    Found 11-bit comparator greater for signal <and0004_0$cmp_gt0000> created at line 111.
+    Found 11-bit comparator less for signal <and0004_0$cmp_lt0000> created at line 111.
+    Found 11-bit adder for signal <and0005_0$addsub0000> created at line 255.
+    Found 11-bit comparator greater for signal <and0005_0$cmp_gt0000> created at line 111.
+    Found 11-bit comparator less for signal <and0005_0$cmp_lt0000> created at line 111.
+    Found 11-bit comparator greater for signal <and0006_0$cmp_gt0000> created at line 111.
+    Found 11-bit comparator less for signal <and0006_0$cmp_lt0000> created at line 111.
+    Found 11-bit adder for signal <and0007_0$addsub0000> created at line 255.
+    Found 11-bit comparator greater for signal <and0007_0$cmp_gt0000> created at line 111.
+    Found 11-bit comparator less for signal <and0007_0$cmp_lt0000> created at line 111.
+    Found 4-bit adder for signal <current_enemy0.X_velocity$addsub0000> created at line 212.
+    Found 4-bit adder for signal <current_enemy0.X_velocity$addsub0001> created at line 212.
+    Found 11-bit adder for signal <current_enemy0.Y$add0000> created at line 204.
+    Found 11-bit adder for signal <current_enemy0.Y$add0001> created at line 205.
+    Found 11-bit adder for signal <current_enemy0.Y$add0002> created at line 204.
+    Found 11-bit adder for signal <current_enemy0.Y$add0003> created at line 205.
+    Found 4-bit comparator greater for signal <current_enemy0.Y$cmp_gt0000> created at line 217.
+    Found 4-bit comparator greater for signal <current_enemy0.Y$cmp_gt0001> created at line 217.
+    Found 4-bit comparator greater for signal <current_enemy0.Y$cmp_gt0002> created at line 226.
+    Found 4-bit comparator greater for signal <current_enemy0.Y$cmp_gt0003> created at line 235.
+    Found 4-bit comparator less for signal <current_enemy0.Y$cmp_lt0000> created at line 226.
+    Found 4-bit comparator less for signal <current_enemy0.Y$cmp_lt0001> created at line 235.
+    Found 4-bit comparator less for signal <current_enemy0.Y$cmp_lt0002> created at line 226.
+    Found 4-bit comparator less for signal <current_enemy0.Y$cmp_lt0003> created at line 235.
+    Found 11-bit comparator less for signal <current_enemy0.Y$cmp_lt0004> created at line 207.
+    Found 11-bit comparator less for signal <current_enemy0.Y$cmp_lt0005> created at line 207.
+    Found 11-bit comparator less for signal <current_enemy0.Y$cmp_lt0006> created at line 207.
+    Found 11-bit comparator less for signal <current_enemy0.Y$cmp_lt0007> created at line 207.
+    Found 4-bit adder for signal <current_enemy0.Y_velocity$addsub0000> created at line 213.
+    Found 4-bit adder for signal <current_enemy0.Y_velocity$addsub0001> created at line 213.
+    Found 1-bit register for signal <enemies<0>.is_coliding_with_player<0>>.
+    Found 11-bit register for signal <enemies<0>.X>.
+    Found 4-bit register for signal <enemies<0>.X_velocity>.
+    Found 11-bit register for signal <enemies<0>.Y>.
+    Found 4-bit register for signal <enemies<0>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<0>.Y_velocity$cmp_ge0000> created at line 207.
+    Found 11-bit comparator greatequal for signal <enemies<0>.Y_velocity$cmp_ge0001> created at line 207.
+    Found 1-bit register for signal <enemies<1>.is_coliding_with_player<0>>.
+    Found 11-bit register for signal <enemies<1>.X>.
+    Found 4-bit register for signal <enemies<1>.X_velocity>.
+    Found 11-bit register for signal <enemies<1>.Y>.
+    Found 4-bit register for signal <enemies<1>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<1>.Y_velocity$cmp_ge0000> created at line 207.
+    Found 11-bit comparator greatequal for signal <enemies<1>.Y_velocity$cmp_ge0001> created at line 207.
+    Found 1-bit register for signal <in_blue_out>.
+    Found 11-bit adder for signal <in_blue_out$addsub0000> created at line 176.
+    Found 11-bit adder for signal <in_blue_out$addsub0001> created at line 177.
+    Found 11-bit adder for signal <in_blue_out$addsub0002> created at line 176.
+    Found 11-bit adder for signal <in_blue_out$addsub0003> created at line 177.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0000> created at line 155.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0001> created at line 156.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0002> created at line 176.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0003> created at line 177.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0004> created at line 176.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0005> created at line 177.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0000> created at line 155.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0001> created at line 156.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0002> created at line 176.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0003> created at line 177.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0004> created at line 176.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0005> created at line 177.
+    Found 1-bit register for signal <in_green_out>.
+    Found 1-bit register for signal <in_red_out>.
+    Found 11-bit up accumulator for signal <x_pos_random>.
+    Found 11-bit up accumulator for signal <y_pos_random>.
     Summary:
-	inferred   4 Accumulator(s).
-	inferred   6 Adder/Subtractor(s).
-	inferred  12 Comparator(s).
+	inferred   2 Accumulator(s).
+	inferred  68 D-type flip-flop(s).
+	inferred  18 Adder/Subtractor(s).
+	inferred  44 Comparator(s).
 Unit <vga_pixel> synthesized.
 
 
 Synthesizing Unit <SCHEME>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/SCHEME.vhf".
+    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master/SCHEME.vhf".
 Unit <SCHEME> synthesized.
 
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 8
- 11-bit adder                                          : 7
+# Adders/Subtractors                                   : 20
+ 11-bit adder                                          : 14
+ 11-bit addsub                                         : 1
  11-bit subtractor                                     : 1
+ 4-bit adder                                           : 4
 # Counters                                             : 2
  11-bit up counter                                     : 2
-# Accumulators                                         : 4
- 10-bit up accumulator                                 : 4
-# Registers                                            : 4
- 1-bit register                                        : 2
- 11-bit register                                       : 2
-# Latches                                              : 3
- 1-bit latch                                           : 3
-# Comparators                                          : 22
- 11-bit comparator greatequal                          : 2
- 11-bit comparator greater                             : 8
- 11-bit comparator less                                : 10
+# Accumulators                                         : 2
+ 11-bit up accumulator                                 : 2
+# Registers                                            : 22
+ 1-bit register                                        : 12
+ 11-bit register                                       : 6
+ 4-bit register                                        : 4
+# Comparators                                          : 54
+ 11-bit comparator greatequal                          : 6
+ 11-bit comparator greater                             : 16
+ 11-bit comparator less                                : 22
  12-bit comparator less                                : 2
+ 4-bit comparator greater                              : 4
+ 4-bit comparator less                                 : 4
 
 =========================================================================
 
@@ -272,30 +327,33 @@ Loading core <PS2_Mouse> for timing and area information for instance <XLXI_10>.
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 8
- 11-bit adder                                          : 7
+# Adders/Subtractors                                   : 20
+ 11-bit adder                                          : 14
+ 11-bit addsub                                         : 1
  11-bit subtractor                                     : 1
+ 4-bit adder                                           : 4
 # Counters                                             : 2
  11-bit up counter                                     : 2
-# Accumulators                                         : 4
- 10-bit up accumulator                                 : 4
-# Registers                                            : 24
- Flip-Flops                                            : 24
-# Latches                                              : 3
- 1-bit latch                                           : 3
-# Comparators                                          : 22
- 11-bit comparator greatequal                          : 2
- 11-bit comparator greater                             : 8
- 11-bit comparator less                                : 10
+# Accumulators                                         : 2
+ 11-bit up accumulator                                 : 2
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+# Comparators                                          : 54
+ 11-bit comparator greatequal                          : 6
+ 11-bit comparator greater                             : 16
+ 11-bit comparator less                                : 22
  12-bit comparator less                                : 2
+ 4-bit comparator greater                              : 4
+ 4-bit comparator less                                 : 4
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2146 - In block <vga_pixel>, Accumulator <enemies<0>.X> <enemies<1>.X> <enemies<1>.Y> <enemies<0>.Y> are equivalent, XST will keep only <enemies<0>.X>.
-WARNING:Xst:1293 - FF/Latch <enemies<0>.X_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <SCHEME> ...
 
@@ -304,19 +362,32 @@ Optimizing unit <vga_800x600> ...
 Optimizing unit <player_movement> ...
 
 Optimizing unit <vga_pixel> ...
+WARNING:Xst:1293 - FF/Latch <enemies<0>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block SCHEME, actual ratio is 5.
+Found area constraint ratio of 100 (+ 5) on block SCHEME, actual ratio is 9.
+FlipFlop XLXI_17/enemies<0>.X_velocity_3 has been replicated 1 time(s)
+FlipFlop XLXI_17/enemies<1>.X_velocity_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
+
+Processing Unit <SCHEME> :
+	Found 2-bit shift register for signal <XLXI_17/green_out>.
+	Found 2-bit shift register for signal <XLXI_17/red_out>.
+Unit <SCHEME> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 55
- Flip-Flops                                            : 55
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
 
 =========================================================================
 
@@ -345,34 +416,36 @@ Design Statistics
 # IOs                              : 9
 
 Cell Usage :
-# BELS                             : 802
+# BELS                             : 1568
 #      GND                         : 2
-#      INV                         : 41
-#      LUT1                        : 88
-#      LUT2                        : 166
-#      LUT2_L                      : 1
-#      LUT3                        : 38
-#      LUT3_D                      : 2
-#      LUT4                        : 54
-#      LUT4_D                      : 11
-#      LUT4_L                      : 3
-#      MUXCY                       : 273
+#      INV                         : 38
+#      LUT1                        : 99
+#      LUT2                        : 355
+#      LUT2_D                      : 5
+#      LUT2_L                      : 3
+#      LUT3                        : 67
+#      LUT3_D                      : 6
+#      LUT3_L                      : 3
+#      LUT4                        : 205
+#      LUT4_D                      : 22
+#      LUT4_L                      : 2
+#      MUXCY                       : 534
+#      MUXF5                       : 9
 #      VCC                         : 2
-#      XORCY                       : 121
-# FlipFlops/Latches                : 137
-#      FD                          : 11
+#      XORCY                       : 216
+# FlipFlops/Latches                : 210
+#      FD                          : 33
 #      FDC                         : 11
 #      FDCE                        : 11
-#      FDE                         : 70
+#      FDE                         : 124
 #      FDR                         : 4
 #      FDRE                        : 16
 #      FDRS                        : 3
 #      FDRSE                       : 1
 #      FDS                         : 1
 #      FDSE                        : 6
-#      LD                          : 3
-# Shift Registers                  : 1
-#      SRL16E                      : 1
+# Shift Registers                  : 3
+#      SRL16E                      : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 8
@@ -386,14 +459,13 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      237  out of   4656     5%  
- Number of Slice Flip Flops:            134  out of   9312     1%  
- Number of 4 input LUTs:                405  out of   9312     4%  
-    Number used as logic:               404
-    Number used as Shift registers:       1
+ Number of Slices:                      466  out of   4656    10%  
+ Number of Slice Flip Flops:            210  out of   9312     2%  
+ Number of 4 input LUTs:                808  out of   9312     8%  
+    Number used as logic:               805
+    Number used as Shift registers:       3
  Number of IOs:                           9
  Number of bonded IOBs:                   9  out of    232     3%  
-    IOB Flip Flops:                       3
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -414,16 +486,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)   | Load  |
------------------------------------+-------------------------+-------+
-Clk_50MHz                          | BUFGP                   | 135   |
-XLXN_5(XLXI_5/vidon_and000068:O)   | NONE(*)(XLXI_13/red_out)| 3     |
------------------------------------+-------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_50MHz                          | BUFGP                  | 213   |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -437,7 +504,7 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.334ns (Maximum Frequency: 187.477MHz)
+   Minimum period: 10.980ns (Maximum Frequency: 91.079MHz)
    Minimum input arrival time before clock: 3.631ns
    Maximum output required time after clock: 7.802ns
    Maximum combinational path delay: No path found
@@ -448,33 +515,47 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 5.334ns (frequency: 187.477MHz)
-  Total number of paths / destination ports: 2145 / 257
+  Clock period: 10.980ns (frequency: 91.079MHz)
+  Total number of paths / destination ports: 73275 / 391
 -------------------------------------------------------------------------
-Delay:               5.334ns (Levels of Logic = 9)
-  Source:            XLXI_5/vcs_0 (FF)
-  Destination:       XLXI_13/enemies<0>.X_9 (FF)
+Delay:               10.980ns (Levels of Logic = 23)
+  Source:            XLXI_17/enemies<1>.Y_velocity_3 (FF)
+  Destination:       XLXI_17/enemies<1>.is_coliding_with_player_0 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_5/vcs_0 to XLXI_13/enemies<0>.X_9
+  Data Path: XLXI_17/enemies<1>.Y_velocity_3 to XLXI_17/enemies<1>.is_coliding_with_player_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            11   0.514   0.945  XLXI_5/vcs_0 (XLXI_5/vcs_0)
-     LUT1:I0->O            1   0.612   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_rt (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_rt)
-     MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>)
-     MUXCY:CI->O           2   0.399   0.410  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6> (XLXI_5/v_sync_cmp_ge0000)
-     LUT4:I2->O            9   0.612   0.697  XLXI_13/enemies<1>_X_and000041 (XLXI_13/enemies<1>_X_and0000)
-     FDE:CE                    0.483          XLXI_13/enemies<0>.X_1
+     FDE:C->Q             15   0.514   0.933  XLXI_17/enemies<1>.Y_velocity_3 (XLXI_17/enemies<1>.Y_velocity_3)
+     LUT2:I1->O            1   0.612   0.000  XLXI_17/Madd_current_enemy0.Y_add0003_lut<3> (XLXI_17/Madd_current_enemy0.Y_add0003_lut<3>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_17/Madd_current_enemy0.Y_add0003_cy<3> (XLXI_17/Madd_current_enemy0.Y_add0003_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Madd_current_enemy0.Y_add0003_cy<4> (XLXI_17/Madd_current_enemy0.Y_add0003_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Madd_current_enemy0.Y_add0003_cy<5> (XLXI_17/Madd_current_enemy0.Y_add0003_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Madd_current_enemy0.Y_add0003_cy<6> (XLXI_17/Madd_current_enemy0.Y_add0003_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Madd_current_enemy0.Y_add0003_cy<7> (XLXI_17/Madd_current_enemy0.Y_add0003_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Madd_current_enemy0.Y_add0003_cy<8> (XLXI_17/Madd_current_enemy0.Y_add0003_cy<8>)
+     MUXCY:CI->O           0   0.052   0.000  XLXI_17/Madd_current_enemy0.Y_add0003_cy<9> (XLXI_17/Madd_current_enemy0.Y_add0003_cy<9>)
+     XORCY:CI->O          42   0.699   1.228  XLXI_17/Madd_current_enemy0.Y_add0003_xor<10> (XLXI_17/current_enemy0_Y_add0003<10>)
+     LUT3_D:I0->O          9   0.612   0.727  XLXI_17/current_enemy0_Y_mux0016<3>21_1 (XLXI_17/current_enemy0_Y_mux0016<3>21)
+     LUT3:I2->O            1   0.612   0.357  XLXI_17/current_enemy0_X_mux0016<1> (XLXI_17/current_enemy0_X_mux0016<1>)
+     MUXCY:DI->O           1   0.773   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<2> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<4> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<6> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<8> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           1   0.399   0.387  XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10> (XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>)
+     LUT4:I2->O            1   0.612   0.509  XLXI_17/enemies<1>_is_coliding_with_player_0_and00009 (XLXI_17/enemies<1>_is_coliding_with_player_0_and00009)
+     LUT4:I0->O            1   0.612   0.000  XLXI_17/enemies<1>_is_coliding_with_player_0_and000010 (XLXI_17/enemies<1>_is_coliding_with_player_0_and0000)
+     FDE:D                     0.268          XLXI_17/enemies<1>.is_coliding_with_player_0
     ----------------------------------------
-    Total                      5.334ns (3.282ns logic, 2.052ns route)
-                                       (61.5% logic, 38.5% route)
+    Total                     10.980ns (6.838ns logic, 4.141ns route)
+                                       (62.3% logic, 37.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
@@ -498,7 +579,7 @@ Offset:              3.631ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 34 / 4
+  Total number of paths / destination ports: 37 / 7
 -------------------------------------------------------------------------
 Offset:              7.802ns (Levels of Logic = 10)
   Source:            XLXI_5/vcs_0 (FF)
@@ -510,50 +591,31 @@ Offset:              7.802ns (Levels of Logic = 10)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q            11   0.514   0.945  XLXI_5/vcs_0 (XLXI_5/vcs_0)
-     LUT2:I0->O            1   0.612   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<0> (XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<0>)
-     MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>1)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1>1)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>1)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>1)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>1)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>1)
-     MUXCY:CI->O           2   0.399   0.532  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>_0 (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>)
-     LUT2:I0->O            1   0.612   0.357  XLXI_5/v_sync1 (VGA_VS_OBUF)
+     LUT1:I0->O            1   0.612   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_rt (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.399   0.509  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6> (XLXI_5/v_sync_cmp_ge0000)
+     LUT2:I0->O            2   0.612   0.380  XLXI_5/v_sync1 (VGA_VS_OBUF)
      OBUF:I->O                 3.169          VGA_VS_OBUF (VGA_VS)
     ----------------------------------------
     Total                      7.802ns (5.968ns logic, 1.834ns route)
                                        (76.5% logic, 23.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_5'
-  Total number of paths / destination ports: 3 / 3
--------------------------------------------------------------------------
-Offset:              4.114ns (Levels of Logic = 1)
-  Source:            XLXI_13/blue_out (LATCH)
-  Destination:       VGA_B (PAD)
-  Source Clock:      XLXN_5 falling
-
-  Data Path: XLXI_13/blue_out to VGA_B
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.588   0.357  XLXI_13/blue_out (XLXI_13/blue_out)
-     OBUF:I->O                 3.169          VGA_B_OBUF (VGA_B)
-    ----------------------------------------
-    Total                      4.114ns (3.757ns logic, 0.357ns route)
-                                       (91.3% logic, 8.7% route)
-
-=========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.46 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.91 secs
  
 --> 
 
-Total memory usage is 218224 kilobytes
+Total memory usage is 221168 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   17 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

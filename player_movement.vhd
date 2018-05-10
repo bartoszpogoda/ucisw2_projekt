@@ -19,7 +19,9 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
 entity player_movement is
@@ -33,7 +35,7 @@ entity player_movement is
 
         player_x : out std_logic_vector(10 downto 0);
         player_y : out std_logic_vector(10 downto 0);
-        player_action : out std_logic
+        player_action : out std_logic_vector(2 downto 0)
     );
 end player_movement;
 
@@ -42,13 +44,15 @@ architecture Behavioral of player_movement is
     -- player position internals
     signal in_player_x : std_logic_vector(10 downto 0) := "00100101100"; -- 300
     signal in_player_y : std_logic_vector(10 downto 0) := "00100101100"; -- 300
-    signal in_player_action : std_logic := '0';
+    signal in_player_action : std_logic_vector(2 downto 0) := "000";
 
     -- player movement area boundaries
     constant player_x_lower_bound : std_logic_vector(10 downto 0) := "00011001000"; --200 
     constant player_x_upper_bound : std_logic_vector(10 downto 0) := "01001011000"; --600 
     constant player_y_lower_bound : std_logic_vector(10 downto 0) := "00001100100"; --100
     constant player_y_upper_bound : std_logic_vector(10 downto 0) := "00111110100"; --500
+    
+   constant dash_distance : SIGNED(6 downto 0) := "0110010"; -- 50
 
 begin
 
@@ -72,6 +76,19 @@ begin
             elsif in_player_y > player_y_upper_bound then
                 in_player_y <= player_y_upper_bound;
             end if;
+            
+            -- handle mouse clicks
+           if in_player_action(0) = '1' then --left click
+               in_player_x <= std_logic_vector(signed(in_player_x) - signed(dash_distance));
+           end if;
+           
+           if in_player_action(1) = '1' then -- right click
+               in_player_x <= std_logic_vector(signed(in_player_x) + signed(dash_distance));
+           end if;
+           
+           if in_player_action(2) = '1' then -- mouse3 click
+               in_player_y <= std_logic_vector(signed(in_player_y) - signed(dash_distance));
+           end if;
                 
         end if;
 
@@ -80,7 +97,11 @@ begin
     process_button_status : process(clk50, DataRdy, B1_Status)
     begin
         if DataRdy = '1' and rising_edge(clk50) then
-            in_player_action <= B1_Status(0);
+            
+            in_player_action(0) <= B1_Status(0);
+            in_player_action(1) <= B1_Status(1);
+            in_player_action(2) <= B1_Status(2);
+
         end if;    
     end process process_button_status;  
  

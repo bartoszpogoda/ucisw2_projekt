@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/xst"
+set -tmpdir "C:/Users/lab/Desktop/ucisw2_projekt-master/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/lab/Desktop/ucisw2_projekt-master/xst"
 elaborate
 -ifn vga_pixel.prj
 -ifmt mixed

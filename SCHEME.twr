@@ -36,427 +36,647 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 2121 paths analyzed, 407 endpoints analyzed, 0 failing endpoints
+ 71247 paths analyzed, 734 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.401ns.
+ Minimum period is  16.474ns.
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_13/enemies<0>.X_5 (SLICE_X55Y14.CE), 44 paths
+Paths for end point XLXI_17/enemies<1>.is_coliding_with_player_0 (SLICE_X31Y31.F2), 14482 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     11.599ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_3 (FF)
-  Destination:          XLXI_13/enemies<0>.X_5 (FF)
+Slack (setup path):     3.526ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/enemies<1>.X_velocity_2 (FF)
+  Destination:          XLXI_17/enemies<1>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.385ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.016ns (0.074 - 0.090)
+  Data Path Delay:      16.474ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_3 to XLXI_13/enemies<0>.X_5
+  Maximum Data Path: XLXI_17/enemies<1>.X_velocity_2 to XLXI_17/enemies<1>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y25.YQ      Tcko                  0.567   XLXI_5/vcs<10>
-                                                       XLXI_5/vcs_3
-    SLICE_X65Y41.F1      net (fanout=12)       2.438   XLXI_5/vcs<3>
-    SLICE_X65Y41.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<2>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-    SLICE_X65Y42.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-    SLICE_X65Y42.COUT    Tbyp                  0.103   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y14.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y14.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_5
-                                                       XLXI_13/enemies<0>.X_5
+    SLICE_X12Y62.XQ      Tcko                  0.515   XLXI_17/enemies<1>.X_velocity_2
+                                                       XLXI_17/enemies<1>.X_velocity_2
+    SLICE_X13Y63.F1      net (fanout=2)        1.018   XLXI_17/enemies<1>.X_velocity_2
+    SLICE_X13Y63.COUT    Topcyf                1.011   XLXI_17/current_enemy0_Y_add0002<2>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_lut<2>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<2>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<3>
+    SLICE_X13Y64.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<3>
+    SLICE_X13Y64.COUT    Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0002<4>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<4>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<5>
+    SLICE_X13Y65.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<5>
+    SLICE_X13Y65.COUT    Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0002<6>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<6>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<7>
+    SLICE_X13Y66.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<7>
+    SLICE_X13Y66.COUT    Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0002<8>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<8>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<9>
+    SLICE_X13Y67.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<9>
+    SLICE_X13Y67.X       Tcinx                 0.402   XLXI_17/current_enemy0_Y_add0002<10>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_xor<10>
+    SLICE_X28Y29.G1      net (fanout=42)       2.672   XLXI_17/current_enemy0_Y_add0002<10>
+    SLICE_X28Y29.Y       Tilo                  0.660   XLXI_17/enemies<1>.Y_5
+                                                       XLXI_17/current_enemy0_Y_mux0016<3>21_1
+    SLICE_X12Y64.F1      net (fanout=10)       1.918   XLXI_17/current_enemy0_Y_mux0016<3>21
+    SLICE_X12Y64.X       Tilo                  0.660   XLXI_17/enemies<1>.X_1
+                                                       XLXI_17/current_enemy0_X_mux0016<1>
+    SLICE_X1Y66.BY       net (fanout=2)        1.622   XLXI_17/current_enemy0_X_mux0016<1>
+    SLICE_X1Y66.COUT     Tbycy                 0.845   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+    SLICE_X1Y67.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+    SLICE_X1Y67.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<2>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+    SLICE_X1Y68.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+    SLICE_X1Y68.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<4>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+    SLICE_X1Y69.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+    SLICE_X1Y69.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<6>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+    SLICE_X1Y70.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+    SLICE_X1Y70.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+    SLICE_X1Y71.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+    SLICE_X1Y71.XB       Tcinxb                0.352   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+    SLICE_X14Y72.F4      net (fanout=1)        0.849   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+    SLICE_X14Y72.X       Tilo                  0.660   XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+    SLICE_X31Y31.F2      net (fanout=1)        1.841   XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+    SLICE_X31Y31.CLK     Tfck                  0.728   XLXI_17/enemies<1>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<1>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.385ns (3.176ns logic, 5.209ns route)
-                                                       (37.9% logic, 62.1% route)
+    Total                                     16.474ns (6.554ns logic, 9.920ns route)
+                                                       (39.8% logic, 60.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.680ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_7 (FF)
-  Destination:          XLXI_13/enemies<0>.X_5 (FF)
+Slack (setup path):     3.652ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/enemies<1>.X_velocity_3_1 (FF)
+  Destination:          XLXI_17/enemies<1>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.303ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.017ns (0.074 - 0.091)
+  Data Path Delay:      16.348ns (Levels of Logic = 12)
+  Clock Path Skew:      0.000ns
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_7 to XLXI_13/enemies<0>.X_5
+  Maximum Data Path: XLXI_17/enemies<1>.X_velocity_3_1 to XLXI_17/enemies<1>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y22.XQ      Tcko                  0.515   XLXI_5/vcs<7>
-                                                       XLXI_5/vcs_7
-    SLICE_X65Y42.F3      net (fanout=11)       2.511   XLXI_5/vcs<7>
-    SLICE_X65Y42.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y14.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y14.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_5
-                                                       XLXI_13/enemies<0>.X_5
+    SLICE_X13Y61.YQ      Tcko                  0.511   XLXI_17/enemies<1>.X_velocity_3_1
+                                                       XLXI_17/enemies<1>.X_velocity_3_1
+    SLICE_X13Y66.F1      net (fanout=7)        1.205   XLXI_17/enemies<1>.X_velocity_3_1
+    SLICE_X13Y66.COUT    Topcyf                1.011   XLXI_17/current_enemy0_Y_add0002<8>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_lut<8>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<8>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<9>
+    SLICE_X13Y67.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<9>
+    SLICE_X13Y67.X       Tcinx                 0.402   XLXI_17/current_enemy0_Y_add0002<10>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_xor<10>
+    SLICE_X28Y29.G1      net (fanout=42)       2.672   XLXI_17/current_enemy0_Y_add0002<10>
+    SLICE_X28Y29.Y       Tilo                  0.660   XLXI_17/enemies<1>.Y_5
+                                                       XLXI_17/current_enemy0_Y_mux0016<3>21_1
+    SLICE_X12Y64.F1      net (fanout=10)       1.918   XLXI_17/current_enemy0_Y_mux0016<3>21
+    SLICE_X12Y64.X       Tilo                  0.660   XLXI_17/enemies<1>.X_1
+                                                       XLXI_17/current_enemy0_X_mux0016<1>
+    SLICE_X1Y66.BY       net (fanout=2)        1.622   XLXI_17/current_enemy0_X_mux0016<1>
+    SLICE_X1Y66.COUT     Tbycy                 0.845   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+    SLICE_X1Y67.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+    SLICE_X1Y67.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<2>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+    SLICE_X1Y68.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+    SLICE_X1Y68.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<4>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+    SLICE_X1Y69.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+    SLICE_X1Y69.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<6>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+    SLICE_X1Y70.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+    SLICE_X1Y70.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+    SLICE_X1Y71.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+    SLICE_X1Y71.XB       Tcinxb                0.352   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+    SLICE_X14Y72.F4      net (fanout=1)        0.849   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+    SLICE_X14Y72.X       Tilo                  0.660   XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+    SLICE_X31Y31.F2      net (fanout=1)        1.841   XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+    SLICE_X31Y31.CLK     Tfck                  0.728   XLXI_17/enemies<1>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<1>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.303ns (3.021ns logic, 5.282ns route)
-                                                       (36.4% logic, 63.6% route)
+    Total                                     16.348ns (6.241ns logic, 10.107ns route)
+                                                       (38.2% logic, 61.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     12.185ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_8 (FF)
-  Destination:          XLXI_13/enemies<0>.X_5 (FF)
+Slack (setup path):     3.884ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/enemies<1>.X_2 (FF)
+  Destination:          XLXI_17/enemies<1>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      7.799ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.074 - 0.090)
+  Data Path Delay:      16.116ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_8 to XLXI_13/enemies<0>.X_5
+  Maximum Data Path: XLXI_17/enemies<1>.X_2 to XLXI_17/enemies<1>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y24.YQ      Tcko                  0.567   XLXI_5/vcs<9>
-                                                       XLXI_5/vcs_8
-    SLICE_X65Y42.F2      net (fanout=11)       1.955   XLXI_5/vcs<8>
-    SLICE_X65Y42.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y14.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y14.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_5
-                                                       XLXI_13/enemies<0>.X_5
+    SLICE_X12Y67.YQ      Tcko                  0.567   XLXI_17/enemies<1>.X_2
+                                                       XLXI_17/enemies<1>.X_2
+    SLICE_X13Y63.F2      net (fanout=3)        0.608   XLXI_17/enemies<1>.X_2
+    SLICE_X13Y63.COUT    Topcyf                1.011   XLXI_17/current_enemy0_Y_add0002<2>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_lut<2>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<2>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<3>
+    SLICE_X13Y64.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<3>
+    SLICE_X13Y64.COUT    Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0002<4>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<4>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<5>
+    SLICE_X13Y65.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<5>
+    SLICE_X13Y65.COUT    Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0002<6>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<6>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<7>
+    SLICE_X13Y66.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<7>
+    SLICE_X13Y66.COUT    Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0002<8>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<8>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_cy<9>
+    SLICE_X13Y67.CIN     net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0002_cy<9>
+    SLICE_X13Y67.X       Tcinx                 0.402   XLXI_17/current_enemy0_Y_add0002<10>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0002_xor<10>
+    SLICE_X28Y29.G1      net (fanout=42)       2.672   XLXI_17/current_enemy0_Y_add0002<10>
+    SLICE_X28Y29.Y       Tilo                  0.660   XLXI_17/enemies<1>.Y_5
+                                                       XLXI_17/current_enemy0_Y_mux0016<3>21_1
+    SLICE_X12Y64.F1      net (fanout=10)       1.918   XLXI_17/current_enemy0_Y_mux0016<3>21
+    SLICE_X12Y64.X       Tilo                  0.660   XLXI_17/enemies<1>.X_1
+                                                       XLXI_17/current_enemy0_X_mux0016<1>
+    SLICE_X1Y66.BY       net (fanout=2)        1.622   XLXI_17/current_enemy0_X_mux0016<1>
+    SLICE_X1Y66.COUT     Tbycy                 0.845   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+    SLICE_X1Y67.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<1>
+    SLICE_X1Y67.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<2>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+    SLICE_X1Y68.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<3>
+    SLICE_X1Y68.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<4>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+    SLICE_X1Y69.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<5>
+    SLICE_X1Y69.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<6>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+    SLICE_X1Y70.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<7>
+    SLICE_X1Y70.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+    SLICE_X1Y71.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<9>
+    SLICE_X1Y71.XB       Tcinxb                0.352   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+                                                       XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+    SLICE_X14Y72.F4      net (fanout=1)        0.849   XLXI_17/Mcompar_and0005_0_cmp_lt0000_cy<10>
+    SLICE_X14Y72.X       Tilo                  0.660   XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+    SLICE_X31Y31.F2      net (fanout=1)        1.841   XLXI_17/enemies<1>_is_coliding_with_player_0_and00009
+    SLICE_X31Y31.CLK     Tfck                  0.728   XLXI_17/enemies<1>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<1>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      7.799ns (3.073ns logic, 4.726ns route)
-                                                       (39.4% logic, 60.6% route)
+    Total                                     16.116ns (6.606ns logic, 9.510ns route)
+                                                       (41.0% logic, 59.0% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_13/enemies<0>.X_6 (SLICE_X55Y14.CE), 44 paths
+Paths for end point XLXI_17/enemies<0>.is_coliding_with_player_0 (SLICE_X21Y26.F4), 14863 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     11.599ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_3 (FF)
-  Destination:          XLXI_13/enemies<0>.X_6 (FF)
+Slack (setup path):     5.950ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/enemies<0>.X_2 (FF)
+  Destination:          XLXI_17/enemies<0>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.385ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.016ns (0.074 - 0.090)
+  Data Path Delay:      13.998ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.052ns (0.071 - 0.123)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_3 to XLXI_13/enemies<0>.X_6
+  Maximum Data Path: XLXI_17/enemies<0>.X_2 to XLXI_17/enemies<0>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y25.YQ      Tcko                  0.567   XLXI_5/vcs<10>
-                                                       XLXI_5/vcs_3
-    SLICE_X65Y41.F1      net (fanout=12)       2.438   XLXI_5/vcs<3>
-    SLICE_X65Y41.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<2>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-    SLICE_X65Y42.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-    SLICE_X65Y42.COUT    Tbyp                  0.103   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y14.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y14.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_5
-                                                       XLXI_13/enemies<0>.X_6
+    SLICE_X0Y48.XQ       Tcko                  0.515   XLXI_17/enemies<0>.X_2
+                                                       XLXI_17/enemies<0>.X_2
+    SLICE_X1Y41.G1       net (fanout=3)        1.484   XLXI_17/enemies<0>.X_2
+    SLICE_X1Y41.COUT     Topcyg                0.871   XLXI_17/current_enemy0_Y_add0000<1>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_lut<2>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<2>
+    SLICE_X1Y42.CIN      net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0000_cy<2>
+    SLICE_X1Y42.COUT     Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0000<3>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<3>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<4>
+    SLICE_X1Y43.CIN      net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0000_cy<4>
+    SLICE_X1Y43.COUT     Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0000<5>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<5>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<6>
+    SLICE_X1Y44.CIN      net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0000_cy<6>
+    SLICE_X1Y44.COUT     Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0000<7>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<7>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<8>
+    SLICE_X1Y45.CIN      net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0000_cy<8>
+    SLICE_X1Y45.Y        Tciny                 0.756   XLXI_17/current_enemy0_Y_add0000<9>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<9>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_xor<10>
+    SLICE_X20Y22.G2      net (fanout=43)       1.752   XLXI_17/current_enemy0_Y_add0000<10>
+    SLICE_X20Y22.Y       Tilo                  0.660   XLXI_17/enemies<0>.Y_5
+                                                       XLXI_17/current_enemy0_Y_mux0008<0>11_1
+    SLICE_X2Y49.F1       net (fanout=10)       2.144   XLXI_17/current_enemy0_Y_mux0008<0>11
+    SLICE_X2Y49.X        Tilo                  0.660   XLXI_17/enemies<0>.X_3
+                                                       XLXI_17/current_enemy0_X_mux0008<3>
+    SLICE_X1Y48.BY       net (fanout=1)        0.384   XLXI_17/current_enemy0_X_mux0008<3>
+    SLICE_X1Y48.COUT     Tbycy                 0.845   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+    SLICE_X1Y49.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+    SLICE_X1Y49.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<4>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+    SLICE_X1Y50.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+    SLICE_X1Y50.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<6>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+    SLICE_X1Y51.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+    SLICE_X1Y51.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+    SLICE_X1Y52.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+    SLICE_X1Y52.XB       Tcinxb                0.352   XLXI_17/enemies<0>.X_10
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<10>
+    SLICE_X1Y53.F4       net (fanout=1)        0.319   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<10>
+    SLICE_X1Y53.X        Tilo                  0.612   XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+                                                       XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+    SLICE_X21Y26.F4      net (fanout=1)        1.298   XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+    SLICE_X21Y26.CLK     Tfck                  0.728   XLXI_17/enemies<0>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<0>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<0>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.385ns (3.176ns logic, 5.209ns route)
-                                                       (37.9% logic, 62.1% route)
+    Total                                     13.998ns (6.617ns logic, 7.381ns route)
+                                                       (47.3% logic, 52.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.680ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_7 (FF)
-  Destination:          XLXI_13/enemies<0>.X_6 (FF)
+Slack (setup path):     6.048ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/enemies<0>.X_2 (FF)
+  Destination:          XLXI_17/enemies<0>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.303ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.017ns (0.074 - 0.091)
+  Data Path Delay:      13.900ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.052ns (0.071 - 0.123)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_7 to XLXI_13/enemies<0>.X_6
+  Maximum Data Path: XLXI_17/enemies<0>.X_2 to XLXI_17/enemies<0>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y22.XQ      Tcko                  0.515   XLXI_5/vcs<7>
-                                                       XLXI_5/vcs_7
-    SLICE_X65Y42.F3      net (fanout=11)       2.511   XLXI_5/vcs<7>
-    SLICE_X65Y42.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y14.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y14.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_5
-                                                       XLXI_13/enemies<0>.X_6
+    SLICE_X0Y48.XQ       Tcko                  0.515   XLXI_17/enemies<0>.X_2
+                                                       XLXI_17/enemies<0>.X_2
+    SLICE_X1Y41.G1       net (fanout=3)        1.484   XLXI_17/enemies<0>.X_2
+    SLICE_X1Y41.COUT     Topcyg                0.773   XLXI_17/current_enemy0_Y_add0000<1>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<2>
+    SLICE_X1Y42.CIN      net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0000_cy<2>
+    SLICE_X1Y42.COUT     Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0000<3>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<3>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<4>
+    SLICE_X1Y43.CIN      net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0000_cy<4>
+    SLICE_X1Y43.COUT     Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0000<5>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<5>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<6>
+    SLICE_X1Y44.CIN      net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0000_cy<6>
+    SLICE_X1Y44.COUT     Tbyp                  0.103   XLXI_17/current_enemy0_Y_add0000<7>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<7>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<8>
+    SLICE_X1Y45.CIN      net (fanout=1)        0.000   XLXI_17/Madd_current_enemy0.Y_add0000_cy<8>
+    SLICE_X1Y45.Y        Tciny                 0.756   XLXI_17/current_enemy0_Y_add0000<9>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_cy<9>
+                                                       XLXI_17/Madd_current_enemy0.Y_add0000_xor<10>
+    SLICE_X20Y22.G2      net (fanout=43)       1.752   XLXI_17/current_enemy0_Y_add0000<10>
+    SLICE_X20Y22.Y       Tilo                  0.660   XLXI_17/enemies<0>.Y_5
+                                                       XLXI_17/current_enemy0_Y_mux0008<0>11_1
+    SLICE_X2Y49.F1       net (fanout=10)       2.144   XLXI_17/current_enemy0_Y_mux0008<0>11
+    SLICE_X2Y49.X        Tilo                  0.660   XLXI_17/enemies<0>.X_3
+                                                       XLXI_17/current_enemy0_X_mux0008<3>
+    SLICE_X1Y48.BY       net (fanout=1)        0.384   XLXI_17/current_enemy0_X_mux0008<3>
+    SLICE_X1Y48.COUT     Tbycy                 0.845   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+    SLICE_X1Y49.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+    SLICE_X1Y49.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<4>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+    SLICE_X1Y50.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+    SLICE_X1Y50.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<6>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+    SLICE_X1Y51.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+    SLICE_X1Y51.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+    SLICE_X1Y52.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+    SLICE_X1Y52.XB       Tcinxb                0.352   XLXI_17/enemies<0>.X_10
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<10>
+    SLICE_X1Y53.F4       net (fanout=1)        0.319   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<10>
+    SLICE_X1Y53.X        Tilo                  0.612   XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+                                                       XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+    SLICE_X21Y26.F4      net (fanout=1)        1.298   XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+    SLICE_X21Y26.CLK     Tfck                  0.728   XLXI_17/enemies<0>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<0>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<0>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.303ns (3.021ns logic, 5.282ns route)
-                                                       (36.4% logic, 63.6% route)
+    Total                                     13.900ns (6.519ns logic, 7.381ns route)
+                                                       (46.9% logic, 53.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     12.185ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_8 (FF)
-  Destination:          XLXI_13/enemies<0>.X_6 (FF)
+Slack (setup path):     6.050ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/x_pos_random_0 (FF)
+  Destination:          XLXI_17/enemies<0>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      7.799ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.074 - 0.090)
+  Data Path Delay:      13.913ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.037ns (0.071 - 0.108)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_8 to XLXI_13/enemies<0>.X_6
+  Maximum Data Path: XLXI_17/x_pos_random_0 to XLXI_17/enemies<0>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y24.YQ      Tcko                  0.567   XLXI_5/vcs<9>
-                                                       XLXI_5/vcs_8
-    SLICE_X65Y42.F2      net (fanout=11)       1.955   XLXI_5/vcs<8>
-    SLICE_X65Y42.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y14.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y14.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_5
-                                                       XLXI_13/enemies<0>.X_6
+    SLICE_X3Y61.XQ       Tcko                  0.514   XLXI_17/x_pos_random<0>
+                                                       XLXI_17/x_pos_random_0
+    SLICE_X20Y22.G3      net (fanout=71)       5.088   XLXI_17/x_pos_random<0>
+    SLICE_X20Y22.Y       Tilo                  0.660   XLXI_17/enemies<0>.Y_5
+                                                       XLXI_17/current_enemy0_Y_mux0008<0>11_1
+    SLICE_X2Y49.F1       net (fanout=10)       2.144   XLXI_17/current_enemy0_Y_mux0008<0>11
+    SLICE_X2Y49.X        Tilo                  0.660   XLXI_17/enemies<0>.X_3
+                                                       XLXI_17/current_enemy0_X_mux0008<3>
+    SLICE_X1Y48.BY       net (fanout=1)        0.384   XLXI_17/current_enemy0_X_mux0008<3>
+    SLICE_X1Y48.COUT     Tbycy                 0.845   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+    SLICE_X1Y49.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<3>
+    SLICE_X1Y49.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<4>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+    SLICE_X1Y50.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<5>
+    SLICE_X1Y50.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<6>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+    SLICE_X1Y51.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<7>
+    SLICE_X1Y51.COUT     Tbyp                  0.103   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+    SLICE_X1Y52.CIN      net (fanout=1)        0.000   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<9>
+    SLICE_X1Y52.XB       Tcinxb                0.352   XLXI_17/enemies<0>.X_10
+                                                       XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<10>
+    SLICE_X1Y53.F4       net (fanout=1)        0.319   XLXI_17/Mcompar_and0000_0_cmp_lt0000_cy<10>
+    SLICE_X1Y53.X        Tilo                  0.612   XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+                                                       XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+    SLICE_X21Y26.F4      net (fanout=1)        1.298   XLXI_17/enemies<0>_is_coliding_with_player_0_and00009
+    SLICE_X21Y26.CLK     Tfck                  0.728   XLXI_17/enemies<0>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<0>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<0>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      7.799ns (3.073ns logic, 4.726ns route)
-                                                       (39.4% logic, 60.6% route)
+    Total                                     13.913ns (4.680ns logic, 9.233ns route)
+                                                       (33.6% logic, 66.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_13/enemies<0>.X_7 (SLICE_X55Y15.CE), 44 paths
+Paths for end point XLXI_17/enemies<1>.is_coliding_with_player_0 (SLICE_X31Y31.F1), 7259 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     11.599ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_3 (FF)
-  Destination:          XLXI_13/enemies<0>.X_7 (FF)
+Slack (setup path):     6.579ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/x_pos_random_0 (FF)
+  Destination:          XLXI_17/enemies<1>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.385ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.016ns (0.074 - 0.090)
+  Data Path Delay:      13.406ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.015ns (0.093 - 0.108)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_3 to XLXI_13/enemies<0>.X_7
+  Maximum Data Path: XLXI_17/x_pos_random_0 to XLXI_17/enemies<1>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y25.YQ      Tcko                  0.567   XLXI_5/vcs<10>
-                                                       XLXI_5/vcs_3
-    SLICE_X65Y41.F1      net (fanout=12)       2.438   XLXI_5/vcs<3>
-    SLICE_X65Y41.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<2>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<2>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-    SLICE_X65Y42.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<3>
-    SLICE_X65Y42.COUT    Tbyp                  0.103   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y15.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y15.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_7
-                                                       XLXI_13/enemies<0>.X_7
+    SLICE_X3Y61.XQ       Tcko                  0.514   XLXI_17/x_pos_random<0>
+                                                       XLXI_17/x_pos_random_0
+    SLICE_X22Y25.F3      net (fanout=71)       5.392   XLXI_17/x_pos_random<0>
+    SLICE_X22Y25.X       Tilo                  0.660   N112
+                                                       XLXI_17/current_enemy0_Y_mux0016<6>1_SW0
+    SLICE_X27Y28.G4      net (fanout=1)        1.005   N112
+    SLICE_X27Y28.COUT    Topcyg                0.871   XLXI_17/and0007_0_addsub0000<5>
+                                                       XLXI_17/current_enemy0_Y_mux0016<6>1
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<6>
+    SLICE_X27Y29.CIN     net (fanout=1)        0.000   XLXI_17/Madd_and0007_0_addsub0000_cy<6>
+    SLICE_X27Y29.Y       Tciny                 0.756   XLXI_17/and0007_0_addsub0000<7>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<7>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_xor<8>
+    SLICE_X35Y25.F1      net (fanout=2)        1.225   XLXI_17/and0007_0_addsub0000<8>
+    SLICE_X35Y25.COUT    Topcyf                1.011   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_lut<8>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+    SLICE_X35Y26.CIN     net (fanout=1)        0.000   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+    SLICE_X35Y26.XB      Tcinxb                0.352   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+    SLICE_X31Y31.F1      net (fanout=1)        0.892   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+    SLICE_X31Y31.CLK     Tfck                  0.728   XLXI_17/enemies<1>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<1>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.385ns (3.176ns logic, 5.209ns route)
-                                                       (37.9% logic, 62.1% route)
+    Total                                     13.406ns (4.892ns logic, 8.514ns route)
+                                                       (36.5% logic, 63.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.680ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_7 (FF)
-  Destination:          XLXI_13/enemies<0>.X_7 (FF)
+Slack (setup path):     6.721ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/x_pos_random_0 (FF)
+  Destination:          XLXI_17/enemies<1>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.303ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.017ns (0.074 - 0.091)
+  Data Path Delay:      13.264ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.015ns (0.093 - 0.108)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_7 to XLXI_13/enemies<0>.X_7
+  Maximum Data Path: XLXI_17/x_pos_random_0 to XLXI_17/enemies<1>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y22.XQ      Tcko                  0.515   XLXI_5/vcs<7>
-                                                       XLXI_5/vcs_7
-    SLICE_X65Y42.F3      net (fanout=11)       2.511   XLXI_5/vcs<7>
-    SLICE_X65Y42.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y15.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y15.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_7
-                                                       XLXI_13/enemies<0>.X_7
+    SLICE_X3Y61.XQ       Tcko                  0.514   XLXI_17/x_pos_random<0>
+                                                       XLXI_17/x_pos_random_0
+    SLICE_X20Y26.F1      net (fanout=71)       5.501   XLXI_17/x_pos_random<0>
+    SLICE_X20Y26.X       Tilo                  0.660   N96
+                                                       XLXI_17/Madd_and0007_0_addsub0000_lut<3>_SW0
+    SLICE_X27Y27.F4      net (fanout=1)        0.511   N96
+    SLICE_X27Y27.COUT    Topcyf                1.011   XLXI_17/and0007_0_addsub0000<3>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_lut<3>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<3>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<4>
+    SLICE_X27Y28.CIN     net (fanout=1)        0.000   XLXI_17/Madd_and0007_0_addsub0000_cy<4>
+    SLICE_X27Y28.COUT    Tbyp                  0.103   XLXI_17/and0007_0_addsub0000<5>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<5>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<6>
+    SLICE_X27Y29.CIN     net (fanout=1)        0.000   XLXI_17/Madd_and0007_0_addsub0000_cy<6>
+    SLICE_X27Y29.Y       Tciny                 0.756   XLXI_17/and0007_0_addsub0000<7>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<7>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_xor<8>
+    SLICE_X35Y25.F1      net (fanout=2)        1.225   XLXI_17/and0007_0_addsub0000<8>
+    SLICE_X35Y25.COUT    Topcyf                1.011   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_lut<8>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+    SLICE_X35Y26.CIN     net (fanout=1)        0.000   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+    SLICE_X35Y26.XB      Tcinxb                0.352   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+    SLICE_X31Y31.F1      net (fanout=1)        0.892   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+    SLICE_X31Y31.CLK     Tfck                  0.728   XLXI_17/enemies<1>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<1>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.303ns (3.021ns logic, 5.282ns route)
-                                                       (36.4% logic, 63.6% route)
+    Total                                     13.264ns (5.135ns logic, 8.129ns route)
+                                                       (38.7% logic, 61.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     12.185ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_5/vcs_8 (FF)
-  Destination:          XLXI_13/enemies<0>.X_7 (FF)
+Slack (setup path):     6.760ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_17/x_pos_random_0 (FF)
+  Destination:          XLXI_17/enemies<1>.is_coliding_with_player_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      7.799ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.074 - 0.090)
+  Data Path Delay:      13.225ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.015ns (0.093 - 0.108)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_5/vcs_8 to XLXI_13/enemies<0>.X_7
+  Maximum Data Path: XLXI_17/x_pos_random_0 to XLXI_17/enemies<1>.is_coliding_with_player_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X64Y24.YQ      Tcko                  0.567   XLXI_5/vcs<9>
-                                                       XLXI_5/vcs_8
-    SLICE_X65Y42.F2      net (fanout=11)       1.955   XLXI_5/vcs<8>
-    SLICE_X65Y42.COUT    Topcyf                1.011   XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_lut<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<4>
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.CIN     net (fanout=1)        0.000   XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<5>
-    SLICE_X65Y43.XB      Tcinxb                0.352   XLXI_5/v_sync_cmp_ge0000
-                                                       XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<6>
-    SLICE_X54Y32.F3      net (fanout=2)        1.182   XLXI_5/v_sync_cmp_ge0000
-    SLICE_X54Y32.X       Tilo                  0.660   XLXI_13/enemies<1>_X_and0000
-                                                       XLXI_13/enemies<1>_X_and000041
-    SLICE_X55Y15.CE      net (fanout=5)        1.589   XLXI_13/enemies<1>_X_and0000
-    SLICE_X55Y15.CLK     Tceck                 0.483   XLXI_13/enemies<0>.X_7
-                                                       XLXI_13/enemies<0>.X_7
+    SLICE_X3Y61.XQ       Tcko                  0.514   XLXI_17/x_pos_random<0>
+                                                       XLXI_17/x_pos_random_0
+    SLICE_X22Y25.F3      net (fanout=71)       5.392   XLXI_17/x_pos_random<0>
+    SLICE_X22Y25.X       Tilo                  0.660   N112
+                                                       XLXI_17/current_enemy0_Y_mux0016<6>1_SW0
+    SLICE_X27Y28.G4      net (fanout=1)        1.005   N112
+    SLICE_X27Y28.COUT    Topcyg                0.871   XLXI_17/and0007_0_addsub0000<5>
+                                                       XLXI_17/current_enemy0_Y_mux0016<6>1
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<6>
+    SLICE_X27Y29.CIN     net (fanout=1)        0.000   XLXI_17/Madd_and0007_0_addsub0000_cy<6>
+    SLICE_X27Y29.Y       Tciny                 0.756   XLXI_17/and0007_0_addsub0000<7>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_cy<7>
+                                                       XLXI_17/Madd_and0007_0_addsub0000_xor<8>
+    SLICE_X35Y25.F1      net (fanout=2)        1.225   XLXI_17/and0007_0_addsub0000<8>
+    SLICE_X35Y25.COUT    Topcyf                0.830   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<8>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+    SLICE_X35Y26.CIN     net (fanout=1)        0.000   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<9>
+    SLICE_X35Y26.XB      Tcinxb                0.352   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+                                                       XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+    SLICE_X31Y31.F1      net (fanout=1)        0.892   XLXI_17/Mcompar_and0007_0_cmp_lt0000_cy<10>
+    SLICE_X31Y31.CLK     Tfck                  0.728   XLXI_17/enemies<1>.is_coliding_with_player_0
+                                                       XLXI_17/enemies<1>_is_coliding_with_player_0_and000010
+                                                       XLXI_17/enemies<1>.is_coliding_with_player_0
     -------------------------------------------------  ---------------------------
-    Total                                      7.799ns (3.073ns logic, 4.726ns route)
-                                                       (39.4% logic, 60.6% route)
+    Total                                     13.225ns (4.711ns logic, 8.514ns route)
+                                                       (35.6% logic, 64.4% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_9/in_player_action (SLICE_X53Y58.BY), 1 path
+Paths for end point XLXI_10/Mshreg_srCmdF4_5 (SLICE_X52Y72.BY), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.847ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_10/B1_Status_0 (FF)
-  Destination:          XLXI_9/in_player_action (FF)
+Slack (hold path):      0.831ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_10/srCmdF4_9 (FF)
+  Destination:          XLXI_10/Mshreg_srCmdF4_5 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.855ns (Levels of Logic = 0)
-  Clock Path Skew:      0.008ns (0.016 - 0.008)
+  Data Path Delay:      0.826ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.005ns (0.016 - 0.021)
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: XLXI_10/B1_Status_0 to XLXI_9/in_player_action
+  Minimum Data Path: XLXI_10/srCmdF4_9 to XLXI_10/Mshreg_srCmdF4_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X51Y60.YQ      Tcko                  0.409   XLXN_15<0>
-                                                       XLXI_10/B1_Status_0
-    SLICE_X53Y58.BY      net (fanout=1)        0.329   XLXN_15<0>
-    SLICE_X53Y58.CLK     Tckdi       (-Th)    -0.117   XLXI_9/in_player_action
-                                                       XLXI_9/in_player_action
+    SLICE_X54Y72.XQ      Tcko                  0.412   XLXI_10/srCmdF4<9>
+                                                       XLXI_10/srCmdF4_9
+    SLICE_X52Y72.BY      net (fanout=1)        0.524   XLXI_10/srCmdF4<9>
+    SLICE_X52Y72.CLK     Tdh         (-Th)     0.110   XLXI_10/srCmdF4_51
+                                                       XLXI_10/Mshreg_srCmdF4_5
     -------------------------------------------------  ---------------------------
-    Total                                      0.855ns (0.526ns logic, 0.329ns route)
-                                                       (61.5% logic, 38.5% route)
+    Total                                      0.826ns (0.302ns logic, 0.524ns route)
+                                                       (36.6% logic, 63.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_10/srCmdF4_1 (SLICE_X67Y84.BX), 1 path
+Paths for end point XLXI_14/in_player_action_1 (SLICE_X26Y63.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.851ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_10/srCmdF4_2 (FF)
-  Destination:          XLXI_10/srCmdF4_1 (FF)
+Slack (hold path):      0.844ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_10/B1_Status_1 (FF)
+  Destination:          XLXI_14/in_player_action_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.851ns (Levels of Logic = 0)
+  Data Path Delay:      0.844ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: XLXI_10/srCmdF4_2 to XLXI_10/srCmdF4_1
+  Minimum Data Path: XLXI_10/B1_Status_1 to XLXI_14/in_player_action_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X66Y85.YQ      Tcko                  0.454   XLXI_10/srCmdF4<3>
-                                                       XLXI_10/srCmdF4_2
-    SLICE_X67Y84.BX      net (fanout=1)        0.317   XLXI_10/srCmdF4<2>
-    SLICE_X67Y84.CLK     Tckdi       (-Th)    -0.080   XLXI_10/srCmdF4<1>
-                                                       XLXI_10/srCmdF4_1
+    SLICE_X27Y63.XQ      Tcko                  0.411   XLXN_15<1>
+                                                       XLXI_10/B1_Status_1
+    SLICE_X26Y63.BX      net (fanout=1)        0.317   XLXN_15<1>
+    SLICE_X26Y63.CLK     Tckdi       (-Th)    -0.116   XLXI_14/in_player_action<1>
+                                                       XLXI_14/in_player_action_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.851ns (0.534ns logic, 0.317ns route)
-                                                       (62.7% logic, 37.3% route)
+    Total                                      0.844ns (0.527ns logic, 0.317ns route)
+                                                       (62.4% logic, 37.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_10/srCmdF4_4 (SLICE_X65Y85.BY), 1 path
+Paths for end point XLXI_10/srCmdF4_2 (SLICE_X55Y70.BY), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.857ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_10/srCmdF4_52 (FF)
-  Destination:          XLXI_10/srCmdF4_4 (FF)
+Slack (hold path):      0.858ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_10/srCmdF4_3 (FF)
+  Destination:          XLXI_10/srCmdF4_2 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.855ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.002ns (0.010 - 0.012)
+  Data Path Delay:      0.858ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: XLXI_10/srCmdF4_52 to XLXI_10/srCmdF4_4
+  Minimum Data Path: XLXI_10/srCmdF4_3 to XLXI_10/srCmdF4_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X65Y87.YQ      Tcko                  0.409   XLXI_10/srCmdF4_52
-                                                       XLXI_10/srCmdF4_52
-    SLICE_X65Y85.BY      net (fanout=1)        0.329   XLXI_10/srCmdF4_52
-    SLICE_X65Y85.CLK     Tckdi       (-Th)    -0.117   XLXI_10/srCmdF4<9>
-                                                       XLXI_10/srCmdF4_4
+    SLICE_X55Y70.XQ      Tcko                  0.411   XLXI_10/srCmdF4<3>
+                                                       XLXI_10/srCmdF4_3
+    SLICE_X55Y70.BY      net (fanout=1)        0.330   XLXI_10/srCmdF4<3>
+    SLICE_X55Y70.CLK     Tckdi       (-Th)    -0.117   XLXI_10/srCmdF4<3>
+                                                       XLXI_10/srCmdF4_2
     -------------------------------------------------  ---------------------------
-    Total                                      0.855ns (0.526ns logic, 0.329ns route)
+    Total                                      0.858ns (0.528ns logic, 0.330ns route)
                                                        (61.5% logic, 38.5% route)
 
 --------------------------------------------------------------------------------
@@ -467,27 +687,27 @@ Slack: 18.562ns (period - (min low pulse limit / (low pulse / period)))
   Period: 20.000ns
   Low pulse: 10.000ns
   Low pulse limit: 0.719ns (Tcl)
-  Physical resource: XLXI_10/cntWDog<4>/CLK
-  Logical resource: XLXI_10/cntWDog_4/CK
-  Location pin: SLICE_X54Y83.CLK
+  Physical resource: XLXI_17/enemies<0>.X_5/CLK
+  Logical resource: XLXI_17/enemies<0>.X_5/CK
+  Location pin: SLICE_X2Y48.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.562ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 10.000ns
   High pulse limit: 0.719ns (Tch)
-  Physical resource: XLXI_10/cntWDog<4>/CLK
-  Logical resource: XLXI_10/cntWDog_4/CK
-  Location pin: SLICE_X54Y83.CLK
+  Physical resource: XLXI_17/enemies<0>.X_5/CLK
+  Logical resource: XLXI_17/enemies<0>.X_5/CK
+  Location pin: SLICE_X2Y48.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.562ns (period - (min low pulse limit / (low pulse / period)))
   Period: 20.000ns
   Low pulse: 10.000ns
   Low pulse limit: 0.719ns (Tcl)
-  Physical resource: XLXI_5/hcs<1>/CLK
-  Logical resource: XLXI_5/hcs_1/CK
-  Location pin: SLICE_X46Y27.CLK
+  Physical resource: XLXI_17/enemies<1>.X_5/CLK
+  Logical resource: XLXI_17/enemies<1>.X_5/CK
+  Location pin: SLICE_X14Y64.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 
@@ -504,7 +724,7 @@ Clock to Setup on destination clock Clk_50MHz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk_50MHz      |    8.401|         |         |         |
+Clk_50MHz      |   16.474|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -513,23 +733,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 2121 paths, 0 nets, and 713 connections
+Constraints cover 71247 paths, 0 nets, and 2580 connections
 
 Design statistics:
-   Minimum period:   8.401ns{1}   (Maximum frequency: 119.033MHz)
+   Minimum period:  16.474ns{1}   (Maximum frequency:  60.702MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Apr 26 10:52:46 2018 
+Analysis completed Thu May 10 10:49:48 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 117 MB
+Peak Memory Usage: 121 MB
 
 
 

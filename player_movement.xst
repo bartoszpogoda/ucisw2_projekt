@@ -1,5 +1,0 @@
-set -tmpdir "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/lab/Desktop/ucisw2_projekt-mouse-integration/xst"
-elaborate
--ifn player_movement.prj
--ifmt mixed

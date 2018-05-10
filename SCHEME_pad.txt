@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Apr 26 10:52:42 2018
+Thu May 10 10:49:43 2018
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -142,7 +142,7 @@ Pinout by Pin Number:
 |G12       |           |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 |G13       |PS2_Data   |IOB      |IO_L20N_1                |BIDIR    |LVCMOS33   |1             |8         |SLOW     |NONE**     |NONE     |         |LOCATED   |NO         |NONE            |
 |G14       |PS2_Clk    |IOB      |IO_L20P_1                |BIDIR    |LVCMOS33   |1             |8         |SLOW     |NONE**     |NONE     |         |LOCATED   |NO         |NONE            |
-|G15       |VGA_B      |IOB      |IO_L18P_1                |OUTPUT   |LVTTL      |1             |8         |FAST     |NONE**     |         |         |LOCATED   |YES        |NONE            |
+|G15       |VGA_B      |IOB      |IO_L18P_1                |OUTPUT   |LVTTL      |1             |8         |FAST     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |G16       |           |DIFFS    |IO_L18N_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |G17       |           |         |VCCAUX                   |         |           |              |          |         |           |         |2.5      |          |           |                |
 |G18       |           |IBUF     |IP                       |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
@@ -159,8 +159,8 @@ Pinout by Pin Number:
 |H11       |           |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 |H12       |           |         |VCCO_1                   |         |           |1             |          |         |           |         |3.30     |          |           |                |
 |H13       |           |IBUF     |IP                       |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|H14       |VGA_R      |IOB      |IO_L17P_1                |OUTPUT   |LVTTL      |1             |8         |FAST     |NONE**     |         |         |LOCATED   |YES        |NONE            |
-|H15       |VGA_G      |IOB      |IO_L17N_1                |OUTPUT   |LVTTL      |1             |8         |FAST     |NONE**     |         |         |LOCATED   |YES        |NONE            |
+|H14       |VGA_R      |IOB      |IO_L17P_1                |OUTPUT   |LVTTL      |1             |8         |FAST     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|H15       |VGA_G      |IOB      |IO_L17N_1                |OUTPUT   |LVTTL      |1             |8         |FAST     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |H16       |           |DIFFM    |IO_L16P_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |H17       |           |DIFFS    |IO_L16N_1/A0             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |H18       |           |IBUF     |IP/VREF_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
