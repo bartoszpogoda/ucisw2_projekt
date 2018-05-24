@@ -1,8 +1,8 @@
-AR player_movement behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/player_movement.vhd sub00/vhpl03 1525942152
-AR vga_800x600 behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/vga_800x600.vhd sub00/vhpl01 1525942150
-EN scheme NULL C:/Users/lab/Desktop/ucisw2_projekt-master/SCHEME.vhf sub00/vhpl06 1525942155
-AR scheme behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/SCHEME.vhf sub00/vhpl07 1525942156
-EN vga_800x600 NULL C:/Users/lab/Desktop/ucisw2_projekt-master/vga_800x600.vhd sub00/vhpl00 1525942149
-AR vga_pixel behavioral C:/Users/lab/Desktop/ucisw2_projekt-master/vga_pixel.vhd sub00/vhpl05 1525942154
-EN player_movement NULL C:/Users/lab/Desktop/ucisw2_projekt-master/player_movement.vhd sub00/vhpl02 1525942151
-EN vga_pixel NULL C:/Users/lab/Desktop/ucisw2_projekt-master/vga_pixel.vhd sub00/vhpl04 1525942153
+AR player_movement behavioral C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd sub00/vhpl03 1526908828
+AR vga_800x600 behavioral C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd sub00/vhpl01 1526908826
+EN scheme NULL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf sub00/vhpl06 1526908831
+AR scheme behavioral C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf sub00/vhpl07 1526908832
+EN vga_800x600 NULL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd sub00/vhpl00 1526908825
+AR vga_pixel behavioral C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd sub00/vhpl05 1526908830
+EN player_movement NULL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd sub00/vhpl02 1526908827
+EN vga_pixel NULL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd sub00/vhpl04 1526908829

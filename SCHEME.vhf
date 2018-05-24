@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : SCHEME.vhf
--- /___/   /\     Timestamp : 05/10/2018 09:56:02
+-- /___/   /\     Timestamp : 05/21/2018 15:08:38
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/ucisw2_projekt-master/SCHEME.vhf -w C:/Users/lab/Desktop/ucisw2_projekt-master/SCHEME.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-1-commit/SCHEME.vhf -w C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-1-commit/SCHEME.sch
 --Design Name: SCHEME
 --Device: spartan3e
 --Purpose:
@@ -46,8 +46,8 @@ architecture BEHAVIORAL of SCHEME is
    signal XLXN_15        : std_logic_vector (7 downto 0);
    signal XLXN_16        : std_logic_vector (7 downto 0);
    signal XLXN_17        : std_logic_vector (7 downto 0);
-   signal XLXN_18        : std_logic;
-   signal XLXN_33        : std_logic_vector (2 downto 0);
+   signal XLXN_51        : std_logic;
+   signal XLXN_52        : std_logic;
    signal PS2_Data_DUMMY : std_logic;
    signal PS2_Clk_DUMMY  : std_logic;
    signal VGA_VS_DUMMY   : std_logic;
@@ -75,29 +75,31 @@ architecture BEHAVIORAL of SCHEME is
    end component;
    
    component player_movement
-      port ( clk50         : in    std_logic; 
-             DataRdy       : in    std_logic; 
-             B1_Status     : in    std_logic_vector (7 downto 0); 
-             B2_X          : in    std_logic_vector (7 downto 0); 
-             B3_Y          : in    std_logic_vector (7 downto 0); 
-             player_x      : out   std_logic_vector (10 downto 0); 
-             player_y      : out   std_logic_vector (10 downto 0); 
-             player_action : out   std_logic_vector (2 downto 0));
+      port ( clk50               : in    std_logic; 
+             DataRdy             : in    std_logic; 
+             B1_Status           : in    std_logic_vector (7 downto 0); 
+             B2_X                : in    std_logic_vector (7 downto 0); 
+             B3_Y                : in    std_logic_vector (7 downto 0); 
+             player_x            : out   std_logic_vector (10 downto 0); 
+             player_y            : out   std_logic_vector (10 downto 0); 
+             player_action       : out   std_logic_vector (2 downto 0); 
+             player_action_ready : out   std_logic);
    end component;
    
    component vga_pixel
-      port ( clk50         : in    std_logic; 
-             v_sync        : in    std_logic; 
-             vidon         : in    std_logic; 
-             h_counter     : in    std_logic_vector (10 downto 0); 
-             v_counter     : in    std_logic_vector (10 downto 0); 
-             player_x      : in    std_logic_vector (10 downto 0); 
-             player_y      : in    std_logic_vector (10 downto 0); 
-             player_action : in    std_logic_vector (2 downto 0); 
-             red_out       : out   std_logic; 
-             green_out     : out   std_logic; 
-             blue_out      : out   std_logic; 
-             DataRdy       : in    std_logic);
+      port ( clk50             : in    std_logic; 
+             DataRdy           : in    std_logic; 
+             v_sync            : in    std_logic; 
+             vidon             : in    std_logic; 
+             player_dash_ready : in    std_logic; 
+             h_counter         : in    std_logic_vector (10 downto 0); 
+             v_counter         : in    std_logic_vector (10 downto 0); 
+             player_x          : in    std_logic_vector (10 downto 0); 
+             player_y          : in    std_logic_vector (10 downto 0); 
+             red_out           : out   std_logic; 
+             green_out         : out   std_logic; 
+             blue_out          : out   std_logic; 
+             reset             : in    std_logic);
    end component;
    
 begin
@@ -120,28 +122,30 @@ begin
                 B1_Status(7 downto 0)=>XLXN_15(7 downto 0),
                 B2_X(7 downto 0)=>XLXN_16(7 downto 0),
                 B3_Y(7 downto 0)=>XLXN_17(7 downto 0),
-                DataRdy=>XLXN_18,
+                DataRdy=>XLXN_51,
                 InitOK=>open,
                 PS2_Clk=>PS2_Clk_DUMMY,
                 PS2_Data=>PS2_Data_DUMMY);
    
-   XLXI_14 : player_movement
+   XLXI_19 : player_movement
       port map (B1_Status(7 downto 0)=>XLXN_15(7 downto 0),
                 B2_X(7 downto 0)=>XLXN_16(7 downto 0),
                 B3_Y(7 downto 0)=>XLXN_17(7 downto 0),
                 clk50=>Clk_50MHz,
-                DataRdy=>XLXN_18,
-                player_action(2 downto 0)=>XLXN_33(2 downto 0),
+                DataRdy=>XLXN_51,
+                player_action=>open,
+                player_action_ready=>XLXN_52,
                 player_x(10 downto 0)=>XLXN_7(10 downto 0),
                 player_y(10 downto 0)=>XLXN_8(10 downto 0));
    
-   XLXI_17 : vga_pixel
+   XLXI_22 : vga_pixel
       port map (clk50=>Clk_50MHz,
-                DataRdy=>XLXN_18,
+                DataRdy=>XLXN_51,
                 h_counter(10 downto 0)=>XLXN_3(10 downto 0),
-                player_action(2 downto 0)=>XLXN_33(2 downto 0),
+                player_dash_ready=>XLXN_52,
                 player_x(10 downto 0)=>XLXN_7(10 downto 0),
                 player_y(10 downto 0)=>XLXN_8(10 downto 0),
+                reset=>btn_south,
                 vidon=>XLXN_5,
                 v_counter(10 downto 0)=>XLXN_4(10 downto 0),
                 v_sync=>VGA_VS_DUMMY,

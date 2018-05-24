@@ -3,3 +3,5 @@ spl2sym -intstyle ise -family spartan3e player_movement.spl C:/Users/lab/Desktop
 vhdtdtfi -lib work player_movement.vhd -prj ucisw_projekt -o player_movement.spl -module player_movement -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 vhdtdtfi -lib work player_movement.vhd -prj ucisw_projekt -o player_movement.spl -module player_movement -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e player_movement.spl C:/Users/lab/Desktop/ucisw2_projekt-master/player_movement.sym 
+vhdtdtfi -lib work player_movement.vhd -prj ucisw_projekt -o player_movement.spl -module player_movement -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e player_movement.spl C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-przed/player_movement.sym 
