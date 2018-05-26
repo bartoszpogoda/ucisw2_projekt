@@ -1,0 +1,24 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_controller_test_isim_beh.exe -prj C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_controller_test_beh.prj work.vga_controller_test 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_800x600.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_controller_test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 103132 KB
+Fuse CPU Usage: 311 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity vga_800x600 [vga_800x600_default]
+Compiling architecture behavior of entity vga_controller_test
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 8 VHDL Units
+Built simulation executable C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_controller_test_isim_beh.exe
+Fuse Memory Usage: 121996 KB
+Fuse CPU Usage: 545 ms

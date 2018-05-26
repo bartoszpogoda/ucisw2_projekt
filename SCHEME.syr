@@ -104,14 +104,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_800x600.vhd" in Library work.
 Architecture behavioral of Entity vga_800x600 is up to date.
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/player_movement.vhd" in Library work.
 Architecture behavioral of Entity player_movement is up to date.
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd" in Library work.
 Entity <vga_pixel> compiled.
+WARNING:HDLParsers:3310 - "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd" Line 255. Function RESPAWN_ENEMY is not pure.  VHDL 87 allowed this; VHDL 93 requires the keyword IMPURE.
 Entity <vga_pixel> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" in Library work.
 Architecture behavioral of Entity scheme is up to date.
 
 =========================================================================
@@ -130,9 +131,9 @@ Analyzing hierarchy for entity <vga_pixel> in library <work> (architecture <beha
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <SCHEME> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf" line 118: Unconnected output port 'InitOK' of component 'PS2_Mouse'.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf" line 118: Instantiating black box module <PS2_Mouse>.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf" line 130: Unconnected output port 'player_action' of component 'player_movement'.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" line 118: Unconnected output port 'InitOK' of component 'PS2_Mouse'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" line 118: Instantiating black box module <PS2_Mouse>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" line 130: Unconnected output port 'player_action' of component 'player_movement'.
 Entity <SCHEME> analyzed. Unit <SCHEME> generated.
 
 Analyzing Entity <vga_800x600> in library <work> (Architecture <behavioral>).
@@ -142,10 +143,27 @@ Analyzing Entity <player_movement> in library <work> (Architecture <behavioral>)
 Entity <player_movement> analyzed. Unit <player_movement> generated.
 
 Analyzing Entity <vga_pixel> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <enemies<0>.width> in unit <vga_pixel> has a constant value of 00000001010 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <enemies<0>.height> in unit <vga_pixel> has a constant value of 00000001010 during circuit operation. The register is replaced by logic.
+WARNING:Xst:1610 - "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd" line 283: Width mismatch. <c_random> has a width of 11 bits but assigned expression is 12-bit wide.
+INFO:Xst:2679 - Register <enemies<9>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<9>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<8>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<8>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<7>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<7>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<6>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<6>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<5>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<5>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<4>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<4>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<3>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<3>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<2>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<2>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <enemies<1>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <enemies<1>.height> in unit <vga_pixel> has a constant value of 00000001010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<1>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<0>.width> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enemies<0>.height> in unit <vga_pixel> has a constant value of 00000001100 during circuit operation. The register is replaced by logic.
 Entity <vga_pixel> analyzed. Unit <vga_pixel> generated.
 
 
@@ -156,7 +174,7 @@ Entity <vga_pixel> analyzed. Unit <vga_pixel> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <vga_800x600>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd".
+    Related source file is "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_800x600.vhd".
     Found 11-bit comparator greatequal for signal <h_sync$cmp_ge0000> created at line 76.
     Found 11-bit comparator less for signal <h_sync$cmp_lt0000> created at line 76.
     Found 11-bit up counter for signal <hcs>.
@@ -174,7 +192,7 @@ Unit <vga_800x600> synthesized.
 
 
 Synthesizing Unit <player_movement>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd".
+    Related source file is "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/player_movement.vhd".
 WARNING:Xst:647 - Input <B1_Status<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 3-bit register for signal <in_player_action>.
     Found 1-bit register for signal <in_player_action_ready>.
@@ -196,121 +214,428 @@ Unit <player_movement> synthesized.
 
 
 Synthesizing Unit <vga_pixel>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd".
+    Related source file is "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd".
 WARNING:Xst:1780 - Signal <game_state.IS_PLAYER_COLLISION> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <blue_out>.
     Found 1-bit register for signal <red_out>.
     Found 1-bit register for signal <green_out>.
-    Found 11-bit adder for signal <and0000_0$add0000> created at line 217.
-    Found 11-bit adder for signal <and0000_0$addsub0000> created at line 217.
-    Found 11-bit adder for signal <and0000_0$addsub0001> created at line 180.
-    Found 11-bit subtractor for signal <and0000_0$addsub0002> created at line 217.
-    Found 11-bit adder for signal <and0000_0$addsub0003> created at line 180.
-    Found 11-bit comparator greater for signal <and0000_0$cmp_gt0000> created at line 180.
-    Found 11-bit comparator greater for signal <and0000_0$cmp_gt0001> created at line 180.
-    Found 11-bit comparator less for signal <and0000_0$cmp_lt0000> created at line 180.
-    Found 11-bit comparator less for signal <and0000_0$cmp_lt0001> created at line 180.
-    Found 11-bit adder for signal <and0001_0$add0001> created at line 180.
-    Found 11-bit adder for signal <and0001_0$add0002> created at line 217.
-    Found 11-bit adder for signal <and0001_0$addsub0000> created at line 217.
-    Found 11-bit adder for signal <and0001_0$addsub0001> created at line 180.
-    Found 11-bit comparator greater for signal <and0001_0$cmp_gt0000> created at line 180.
-    Found 11-bit comparator greater for signal <and0001_0$cmp_gt0001> created at line 180.
-    Found 11-bit comparator less for signal <and0001_0$cmp_lt0000> created at line 180.
-    Found 11-bit comparator less for signal <and0001_0$cmp_lt0001> created at line 180.
-    Found 11-bit adder for signal <and0002_0$add0000> created at line 217.
-    Found 11-bit subtractor for signal <and0002_0$addsub0000> created at line 217.
-    Found 11-bit adder for signal <and0002_0$addsub0001> created at line 180.
-    Found 11-bit adder for signal <and0002_0$addsub0002> created at line 180.
-    Found 11-bit comparator greater for signal <and0002_0$cmp_gt0000> created at line 180.
-    Found 11-bit comparator less for signal <and0002_0$cmp_lt0000> created at line 180.
-    Found 11-bit comparator less for signal <and0002_0$cmp_lt0001> created at line 180.
-    Found 11-bit comparator greater for signal <and0003_0$cmp_gt0000> created at line 173.
-    Found 11-bit comparator less for signal <and0003_0$cmp_lt0000> created at line 173.
-    Found 11-bit adder for signal <and0004_0$addsub0000> created at line 301.
-    Found 11-bit comparator greater for signal <and0004_0$cmp_gt0000> created at line 173.
-    Found 11-bit comparator less for signal <and0004_0$cmp_lt0000> created at line 173.
-    Found 11-bit comparator greater for signal <and0005_0$cmp_gt0000> created at line 173.
-    Found 11-bit comparator less for signal <and0005_0$cmp_lt0000> created at line 173.
-    Found 11-bit adder for signal <and0006_0$addsub0000> created at line 301.
-    Found 11-bit comparator greater for signal <and0006_0$cmp_gt0000> created at line 173.
-    Found 11-bit comparator less for signal <and0006_0$cmp_lt0000> created at line 173.
-    Found 11-bit comparator greater for signal <and0007_0$cmp_gt0000> created at line 173.
-    Found 11-bit comparator less for signal <and0007_0$cmp_lt0000> created at line 173.
-    Found 11-bit adder for signal <and0008_0$addsub0000> created at line 301.
-    Found 11-bit comparator greater for signal <and0008_0$cmp_gt0000> created at line 173.
-    Found 11-bit comparator less for signal <and0008_0$cmp_lt0000> created at line 173.
-    Found 11-bit comparator greater for signal <and0009_0$cmp_gt0000> created at line 173.
-    Found 11-bit comparator less for signal <and0009_0$cmp_lt0000> created at line 173.
-    Found 11-bit adder for signal <and0010_0$addsub0000> created at line 301.
-    Found 11-bit comparator greater for signal <and0010_0$cmp_gt0000> created at line 173.
-    Found 11-bit comparator less for signal <and0010_0$cmp_lt0000> created at line 173.
-    Found 11-bit adder for signal <current_enemy0.Y$add0000> created at line 292.
-    Found 11-bit adder for signal <current_enemy0.Y$add0001> created at line 293.
-    Found 11-bit adder for signal <current_enemy0.Y$add0002> created at line 292.
-    Found 11-bit adder for signal <current_enemy0.Y$add0003> created at line 293.
-    Found 11-bit comparator less for signal <current_enemy0.Y$cmp_lt0000> created at line 295.
-    Found 11-bit comparator less for signal <current_enemy0.Y$cmp_lt0001> created at line 295.
-    Found 4-bit comparator less for signal <current_enemy0.Y$cmp_lt0002> created at line 158.
-    Found 4-bit comparator less for signal <current_enemy0.Y$cmp_lt0003> created at line 158.
-    Found 11-bit comparator less for signal <current_enemy0.Y$cmp_lt0004> created at line 295.
-    Found 11-bit comparator less for signal <current_enemy0.Y$cmp_lt0005> created at line 295.
-    Found 4-bit comparator less for signal <current_enemy0.Y$cmp_lt0006> created at line 158.
-    Found 4-bit comparator less for signal <current_enemy0.Y$cmp_lt0007> created at line 158.
+    Found 11-bit adder for signal <and0000_0$addsub0000> created at line 306.
+    Found 11-bit adder for signal <and0000_0$addsub0001> created at line 267.
+    Found 11-bit subtractor for signal <and0000_0$addsub0002> created at line 306.
+    Found 11-bit adder for signal <and0000_0$addsub0003> created at line 267.
+    Found 11-bit comparator greater for signal <and0000_0$cmp_gt0000> created at line 267.
+    Found 11-bit comparator greater for signal <and0000_0$cmp_gt0001> created at line 267.
+    Found 11-bit comparator less for signal <and0000_0$cmp_lt0000> created at line 267.
+    Found 11-bit comparator less for signal <and0000_0$cmp_lt0001> created at line 267.
+    Found 11-bit adder for signal <and0001_0$add0001> created at line 267.
+    Found 11-bit adder for signal <and0001_0$add0002> created at line 306.
+    Found 11-bit adder for signal <and0001_0$addsub0000> created at line 306.
+    Found 11-bit adder for signal <and0001_0$addsub0001> created at line 267.
+    Found 11-bit comparator greater for signal <and0001_0$cmp_gt0000> created at line 267.
+    Found 11-bit comparator greater for signal <and0001_0$cmp_gt0001> created at line 267.
+    Found 11-bit comparator less for signal <and0001_0$cmp_lt0000> created at line 267.
+    Found 11-bit comparator less for signal <and0001_0$cmp_lt0001> created at line 267.
+    Found 11-bit subtractor for signal <and0002_0$addsub0000> created at line 306.
+    Found 11-bit adder for signal <and0002_0$addsub0001> created at line 267.
+    Found 11-bit adder for signal <and0002_0$addsub0002> created at line 267.
+    Found 11-bit comparator greater for signal <and0002_0$cmp_gt0000> created at line 267.
+    Found 11-bit comparator less for signal <and0002_0$cmp_lt0000> created at line 267.
+    Found 11-bit comparator less for signal <and0002_0$cmp_lt0001> created at line 267.
+    Found 11-bit comparator greater for signal <and0003_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0003_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0004_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0004_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0004_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0005_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0005_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0006_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0006_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0006_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0007_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0007_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0008_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0008_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0008_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0009_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0009_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0010_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0010_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0010_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0011_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0011_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0012_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0012_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0012_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0013_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0013_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0014_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0014_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0014_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0015_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0015_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0016_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0016_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0016_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0017_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0017_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0018_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0018_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0018_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0019_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0019_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0020_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0020_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0020_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0021_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0021_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0022_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0022_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0022_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0023_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0023_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0024_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0024_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0024_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0025_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0025_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0026_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0026_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0026_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0027_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0027_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0028_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0028_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0028_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0029_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0029_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0030_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0030_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0030_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0031_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0031_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0032_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0032_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0032_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0033_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0033_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0034_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0034_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0034_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0035_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0035_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0036_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0036_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0036_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0037_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0037_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0038_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0038_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0038_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0039_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0039_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0040_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0040_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0040_0$cmp_lt0000> created at line 260.
+    Found 11-bit comparator greater for signal <and0041_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0041_0$cmp_lt0000> created at line 260.
+    Found 11-bit adder for signal <and0042_0$addsub0000> created at line 390.
+    Found 11-bit comparator greater for signal <and0042_0$cmp_gt0000> created at line 260.
+    Found 11-bit comparator less for signal <and0042_0$cmp_lt0000> created at line 260.
+    Found 11-bit up counter for signal <c_random>.
+    Found 11-bit adder for signal <c_random$add0000> created at line 283.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0000> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0001> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0002> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0003> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0004> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0005> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0006> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0007> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0008> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0009> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0010> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0011> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0012> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0013> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0014> created at line 245.
+    Found 4-bit comparator less for signal <current_enemy0.X$cmp_lt0015> created at line 245.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0000> created at line 381.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0001> created at line 382.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0002> created at line 381.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0003> created at line 382.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0004> created at line 381.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0005> created at line 382.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0006> created at line 381.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0007> created at line 382.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0008> created at line 381.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0009> created at line 382.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0010> created at line 381.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0011> created at line 382.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0012> created at line 381.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0013> created at line 382.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0014> created at line 381.
+    Found 11-bit adder for signal <current_enemy0.X_velocity$add0015> created at line 382.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0000> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0001> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0002> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0003> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0004> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0005> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0006> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0007> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0008> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0009> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0010> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0011> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0012> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0013> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0014> created at line 384.
+    Found 11-bit comparator less for signal <current_enemy0.X_velocity$cmp_lt0015> created at line 384.
     Found 11-bit register for signal <enemies<0>.X>.
     Found 4-bit register for signal <enemies<0>.X_velocity>.
     Found 11-bit register for signal <enemies<0>.Y>.
     Found 4-bit register for signal <enemies<0>.Y_velocity>.
-    Found 11-bit comparator greatequal for signal <enemies<0>.Y_velocity$cmp_ge0000> created at line 295.
-    Found 11-bit comparator greatequal for signal <enemies<0>.Y_velocity$cmp_ge0001> created at line 295.
+    Found 11-bit comparator greatequal for signal <enemies<0>.Y_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<0>.Y_velocity$cmp_ge0001> created at line 384.
     Found 11-bit register for signal <enemies<1>.X>.
     Found 4-bit register for signal <enemies<1>.X_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<1>.X_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<1>.X_velocity$cmp_ge0001> created at line 384.
     Found 11-bit register for signal <enemies<1>.Y>.
     Found 4-bit register for signal <enemies<1>.Y_velocity>.
-    Found 11-bit comparator greatequal for signal <enemies<1>.Y_velocity$cmp_ge0000> created at line 295.
-    Found 11-bit comparator greatequal for signal <enemies<1>.Y_velocity$cmp_ge0001> created at line 295.
-    Found 4-bit adder for signal <enemy.X_velocity$addsub0000> created at line 126.
-    Found 4-bit comparator greater for signal <enemy.Y$cmp_gt0000> created at line 131.
-    Found 4-bit comparator greater for signal <enemy.Y$cmp_gt0001> created at line 131.
-    Found 4-bit adder for signal <enemy.Y_velocity$addsub0000> created at line 127.
-    Found 4-bit adder for signal <enemy0.X_velocity$addsub0000> created at line 126.
-    Found 4-bit comparator greater for signal <enemy0.Y$cmp_gt0000> created at line 131.
-    Found 4-bit comparator greater for signal <enemy0.Y$cmp_gt0001> created at line 131.
-    Found 4-bit comparator less for signal <enemy0.Y$cmp_lt0000> created at line 140.
-    Found 4-bit comparator less for signal <enemy0.Y$cmp_lt0001> created at line 149.
-    Found 4-bit adder for signal <enemy0.Y_velocity$addsub0000> created at line 127.
-    Found 4-bit adder for signal <enemy1.X_velocity$addsub0000> created at line 126.
-    Found 4-bit comparator greater for signal <enemy1.Y$cmp_gt0000> created at line 131.
-    Found 4-bit comparator greater for signal <enemy1.Y$cmp_gt0001> created at line 131.
-    Found 4-bit adder for signal <enemy1.Y_velocity$addsub0000> created at line 127.
-    Found 4-bit adder for signal <enemy2.X_velocity$addsub0000> created at line 126.
-    Found 4-bit comparator greater for signal <enemy2.Y$cmp_gt0000> created at line 131.
-    Found 4-bit comparator greater for signal <enemy2.Y$cmp_gt0001> created at line 131.
-    Found 4-bit comparator less for signal <enemy2.Y$cmp_lt0000> created at line 140.
-    Found 4-bit comparator less for signal <enemy2.Y$cmp_lt0001> created at line 149.
-    Found 4-bit adder for signal <enemy2.Y_velocity$addsub0000> created at line 127.
+    Found 11-bit register for signal <enemies<2>.X>.
+    Found 4-bit register for signal <enemies<2>.X_velocity>.
+    Found 11-bit register for signal <enemies<2>.Y>.
+    Found 4-bit register for signal <enemies<2>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<2>.Y_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<2>.Y_velocity$cmp_ge0001> created at line 384.
+    Found 11-bit register for signal <enemies<3>.X>.
+    Found 4-bit register for signal <enemies<3>.X_velocity>.
+    Found 11-bit register for signal <enemies<3>.Y>.
+    Found 4-bit register for signal <enemies<3>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<3>.Y_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<3>.Y_velocity$cmp_ge0001> created at line 384.
+    Found 11-bit register for signal <enemies<4>.X>.
+    Found 4-bit register for signal <enemies<4>.X_velocity>.
+    Found 11-bit register for signal <enemies<4>.Y>.
+    Found 4-bit register for signal <enemies<4>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<4>.Y_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<4>.Y_velocity$cmp_ge0001> created at line 384.
+    Found 11-bit register for signal <enemies<5>.X>.
+    Found 4-bit register for signal <enemies<5>.X_velocity>.
+    Found 11-bit register for signal <enemies<5>.Y>.
+    Found 4-bit register for signal <enemies<5>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<5>.Y_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<5>.Y_velocity$cmp_ge0001> created at line 384.
+    Found 11-bit register for signal <enemies<6>.X>.
+    Found 4-bit register for signal <enemies<6>.X_velocity>.
+    Found 11-bit register for signal <enemies<6>.Y>.
+    Found 4-bit register for signal <enemies<6>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<6>.Y_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<6>.Y_velocity$cmp_ge0001> created at line 384.
+    Found 11-bit register for signal <enemies<7>.X>.
+    Found 4-bit register for signal <enemies<7>.X_velocity>.
+    Found 11-bit register for signal <enemies<7>.Y>.
+    Found 4-bit register for signal <enemies<7>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<7>.Y_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<7>.Y_velocity$cmp_ge0001> created at line 384.
+    Found 11-bit register for signal <enemies<8>.X>.
+    Found 4-bit register for signal <enemies<8>.X_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<8>.X_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<8>.X_velocity$cmp_ge0001> created at line 384.
+    Found 11-bit register for signal <enemies<8>.Y>.
+    Found 4-bit register for signal <enemies<8>.Y_velocity>.
+    Found 11-bit register for signal <enemies<9>.X>.
+    Found 4-bit register for signal <enemies<9>.X_velocity>.
+    Found 11-bit register for signal <enemies<9>.Y>.
+    Found 4-bit register for signal <enemies<9>.Y_velocity>.
+    Found 11-bit comparator greatequal for signal <enemies<9>.Y_velocity$cmp_ge0000> created at line 384.
+    Found 11-bit comparator greatequal for signal <enemies<9>.Y_velocity$cmp_ge0001> created at line 384.
+    Found 4-bit comparator greater for signal <enemy.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy.X$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy.X$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy0.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy0.X$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy0.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy0.X$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy0.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy0.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit adder for signal <enemy1.X_velocity$addsub0000> created at line 210.
+    Found 4-bit comparator greater for signal <enemy1.Y$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy1.Y$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy1.Y$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy1.Y$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy1.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy10.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy10.X$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy10.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy10.X$cmp_lt0001> created at line 236.
+    Found 11-bit adder for signal <enemy10.X_velocity$add0000> created at line 381.
+    Found 11-bit adder for signal <enemy10.X_velocity$add0001> created at line 382.
+    Found 4-bit adder for signal <enemy10.X_velocity$addsub0000> created at line 210.
+    Found 11-bit comparator less for signal <enemy10.X_velocity$cmp_lt0000> created at line 384.
+    Found 11-bit comparator less for signal <enemy10.X_velocity$cmp_lt0001> created at line 384.
+    Found 4-bit adder for signal <enemy10.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy11.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy11.X$cmp_gt0001> created at line 218.
+    Found 4-bit adder for signal <enemy11.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy11.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy12.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy12.X$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy12.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy12.X$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy12.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy12.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy13.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy13.X$cmp_gt0001> created at line 218.
+    Found 4-bit adder for signal <enemy13.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy13.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy14.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy14.X$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy14.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy14.X$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy14.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy14.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy15.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy15.X$cmp_gt0001> created at line 218.
+    Found 4-bit adder for signal <enemy15.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy15.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit adder for signal <enemy16.X_velocity$addsub0000> created at line 210.
+    Found 4-bit comparator greater for signal <enemy16.Y$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy16.Y$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy16.Y$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy16.Y$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy16.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy17.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy17.X$cmp_gt0001> created at line 218.
+    Found 4-bit adder for signal <enemy17.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy17.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy18.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy18.X$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy18.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy18.X$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy18.X_velocity$addsub0000> created at line 210.
+    Found 11-bit adder for signal <enemy18.Y_velocity$add0000> created at line 381.
+    Found 11-bit adder for signal <enemy18.Y_velocity$add0001> created at line 382.
+    Found 4-bit adder for signal <enemy18.Y_velocity$addsub0000> created at line 214.
+    Found 11-bit comparator less for signal <enemy18.Y_velocity$cmp_lt0000> created at line 384.
+    Found 11-bit comparator less for signal <enemy18.Y_velocity$cmp_lt0001> created at line 384.
+    Found 4-bit comparator greater for signal <enemy2.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy2.X$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy2.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy2.X$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy2.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy2.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy3.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy3.X$cmp_gt0001> created at line 218.
+    Found 4-bit adder for signal <enemy3.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy3.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy4.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy4.X$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy4.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy4.X$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy4.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy4.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy5.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy5.X$cmp_gt0001> created at line 218.
+    Found 4-bit adder for signal <enemy5.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy5.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy6.X$cmp_gt0000> created at line 227.
+    Found 4-bit comparator greater for signal <enemy6.X$cmp_gt0001> created at line 236.
+    Found 4-bit comparator less for signal <enemy6.X$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy6.X$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy6.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy6.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy7.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy7.X$cmp_gt0001> created at line 218.
+    Found 4-bit adder for signal <enemy7.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy7.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit adder for signal <enemy8.X_velocity$addsub0000> created at line 210.
+    Found 4-bit comparator greater for signal <enemy8.Y$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy8.Y$cmp_gt0001> created at line 218.
+    Found 4-bit comparator less for signal <enemy8.Y$cmp_lt0000> created at line 227.
+    Found 4-bit comparator less for signal <enemy8.Y$cmp_lt0001> created at line 236.
+    Found 4-bit adder for signal <enemy8.Y_velocity$addsub0000> created at line 214.
+    Found 4-bit comparator greater for signal <enemy9.X$cmp_gt0000> created at line 218.
+    Found 4-bit comparator greater for signal <enemy9.X$cmp_gt0001> created at line 218.
+    Found 4-bit adder for signal <enemy9.X_velocity$addsub0000> created at line 210.
+    Found 4-bit adder for signal <enemy9.Y_velocity$addsub0000> created at line 214.
     Found 1-bit register for signal <game_state.IS_GAME_OVER<0>>.
-    Found 2-bit down counter for signal <game_state.PLAYER_LIVES>.
+    Found 2-bit register for signal <game_state.PLAYER_LIVES>.
+    Found 2-bit subtractor for signal <game_state.PLAYER_LIVES$mux0000>.
     Found 1-bit register for signal <in_blue_out>.
-    Found 11-bit adder for signal <in_blue_out$addsub0000> created at line 263.
-    Found 11-bit adder for signal <in_blue_out$addsub0001> created at line 264.
-    Found 11-bit adder for signal <in_blue_out$addsub0002> created at line 263.
-    Found 11-bit adder for signal <in_blue_out$addsub0003> created at line 264.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0000> created at line 213.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0001> created at line 214.
-    Found 2-bit comparator greater for signal <in_blue_out$cmp_gt0002> created at line 217.
-    Found 2-bit comparator greater for signal <in_blue_out$cmp_gt0003> created at line 217.
-    Found 2-bit comparator greater for signal <in_blue_out$cmp_gt0004> created at line 217.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0005> created at line 263.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0006> created at line 264.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0007> created at line 263.
-    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0008> created at line 264.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0000> created at line 213.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0001> created at line 214.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0002> created at line 263.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0003> created at line 264.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0004> created at line 263.
-    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0005> created at line 264.
+    Found 11-bit adder for signal <in_blue_out$add0000> created at line 303.
+    Found 11-bit adder for signal <in_blue_out$add0001> created at line 302.
+    Found 11-bit adder for signal <in_blue_out$addsub0000> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0001> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0002> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0003> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0004> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0005> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0006> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0007> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0008> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0009> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0010> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0011> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0012> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0013> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0014> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0015> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0016> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0017> created at line 353.
+    Found 11-bit adder for signal <in_blue_out$addsub0018> created at line 352.
+    Found 11-bit adder for signal <in_blue_out$addsub0019> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0000> created at line 302.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0001> created at line 303.
+    Found 2-bit comparator greater for signal <in_blue_out$cmp_gt0002> created at line 306.
+    Found 2-bit comparator greater for signal <in_blue_out$cmp_gt0003> created at line 306.
+    Found 2-bit comparator greater for signal <in_blue_out$cmp_gt0004> created at line 306.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0005> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0006> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0007> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0008> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0009> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0010> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0011> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0012> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0013> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0014> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0015> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0016> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0017> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0018> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0019> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0020> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0021> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0022> created at line 353.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0023> created at line 352.
+    Found 11-bit comparator greater for signal <in_blue_out$cmp_gt0024> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0000> created at line 302.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0001> created at line 303.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0002> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0003> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0004> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0005> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0006> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0007> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0008> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0009> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0010> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0011> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0012> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0013> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0014> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0015> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0016> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0017> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0018> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0019> created at line 353.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0020> created at line 352.
+    Found 11-bit comparator less for signal <in_blue_out$cmp_lt0021> created at line 353.
     Found 1-bit register for signal <in_green_out>.
     Found 1-bit register for signal <in_red_out>.
     Found 11-bit up accumulator for signal <x_pos_random>.
@@ -318,14 +643,14 @@ WARNING:Xst:1780 - Signal <game_state.IS_PLAYER_COLLISION> is never used or assi
     Summary:
 	inferred   1 Counter(s).
 	inferred   2 Accumulator(s).
-	inferred  67 D-type flip-flop(s).
-	inferred  33 Adder/Subtractor(s).
-	inferred  66 Comparator(s).
+	inferred 309 D-type flip-flop(s).
+	inferred 115 Adder/Subtractor(s).
+	inferred 258 Comparator(s).
 Unit <vga_pixel> synthesized.
 
 
 Synthesizing Unit <SCHEME>.
-    Related source file is "C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf".
+    Related source file is "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf".
 Unit <SCHEME> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -334,29 +659,30 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 35
- 11-bit adder                                          : 23
+# Adders/Subtractors                                   : 117
+ 11-bit adder                                          : 72
  11-bit addsub                                         : 1
  11-bit subtractor                                     : 3
- 4-bit adder                                           : 8
+ 2-bit subtractor                                      : 1
+ 4-bit adder                                           : 40
 # Counters                                             : 4
- 11-bit up counter                                     : 2
- 2-bit down counter                                    : 1
+ 11-bit up counter                                     : 3
  28-bit up counter                                     : 1
 # Accumulators                                         : 2
  11-bit up accumulator                                 : 2
-# Registers                                            : 22
+# Registers                                            : 55
  1-bit register                                        : 12
- 11-bit register                                       : 6
- 4-bit register                                        : 4
-# Comparators                                          : 76
- 11-bit comparator greatequal                          : 6
- 11-bit comparator greater                             : 21
- 11-bit comparator less                                : 28
+ 11-bit register                                       : 22
+ 2-bit register                                        : 1
+ 4-bit register                                        : 20
+# Comparators                                          : 268
+ 11-bit comparator greatequal                          : 22
+ 11-bit comparator greater                             : 69
+ 11-bit comparator less                                : 92
  12-bit comparator less                                : 2
  2-bit comparator greater                              : 3
- 4-bit comparator greater                              : 8
- 4-bit comparator less                                 : 8
+ 4-bit comparator greater                              : 40
+ 4-bit comparator less                                 : 40
 
 =========================================================================
 
@@ -371,33 +697,43 @@ Loading core <PS2_Mouse> for timing and area information for instance <XLXI_10>.
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 35
- 11-bit adder                                          : 23
+# Adders/Subtractors                                   : 117
+ 11-bit adder                                          : 72
  11-bit addsub                                         : 1
  11-bit subtractor                                     : 3
- 4-bit adder                                           : 8
+ 2-bit subtractor                                      : 1
+ 4-bit adder                                           : 40
 # Counters                                             : 4
- 11-bit up counter                                     : 2
- 2-bit down counter                                    : 1
+ 11-bit up counter                                     : 3
  28-bit up counter                                     : 1
 # Accumulators                                         : 2
  11-bit up accumulator                                 : 2
-# Registers                                            : 94
- Flip-Flops                                            : 94
-# Comparators                                          : 76
- 11-bit comparator greatequal                          : 6
- 11-bit comparator greater                             : 21
- 11-bit comparator less                                : 28
+# Registers                                            : 336
+ Flip-Flops                                            : 336
+# Comparators                                          : 268
+ 11-bit comparator greatequal                          : 22
+ 11-bit comparator greater                             : 69
+ 11-bit comparator less                                : 92
  12-bit comparator less                                : 2
  2-bit comparator greater                              : 3
- 4-bit comparator greater                              : 8
- 4-bit comparator less                                 : 8
+ 4-bit comparator greater                              : 40
+ 4-bit comparator less                                 : 40
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <c_random_1> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_2> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_3> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_4> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_5> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_6> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_7> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_8> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_9> of sequential type is unconnected in block <vga_pixel>.
+WARNING:Xst:2677 - Node <c_random_10> of sequential type is unconnected in block <vga_pixel>.
 
 Optimizing unit <SCHEME> ...
 
@@ -406,38 +742,134 @@ Optimizing unit <vga_800x600> ...
 Optimizing unit <player_movement> ...
 
 Optimizing unit <vga_pixel> ...
-WARNING:Xst:1293 - FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <enemies<9>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<9>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <enemies<9>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<9>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <enemies<0>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<9>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <enemies<9>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<9>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<9>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <enemies<0>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <enemies<9>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<9>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<9>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<2>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<3>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<4>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<5>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<6>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.X_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<7>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<8>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.Y_velocity_1> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<0>.Y_velocity_0> has a constant value of 0 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <enemies<1>.X_velocity_0> has a constant value of 1 in block <vga_pixel>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block SCHEME, actual ratio is 14.
-FlipFlop XLXI_22/enemies<0>.X_velocity_3 has been replicated 1 time(s)
-FlipFlop XLXI_22/enemies<0>.Y_velocity_3 has been replicated 1 time(s)
-FlipFlop XLXI_22/enemies<1>.X_velocity_3 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block SCHEME, actual ratio is 43.
+FlipFlop XLXI_22/enemies<4>.X_velocity_3 has been replicated 1 time(s)
+FlipFlop XLXI_22/enemies<6>.X_velocity_3 has been replicated 1 time(s)
+FlipFlop XLXI_22/enemies<7>.X_velocity_3 has been replicated 1 time(s)
+FlipFlop XLXI_22/x_pos_random_0 has been replicated 1 time(s)
+FlipFlop XLXI_22/x_pos_random_1 has been replicated 1 time(s)
+FlipFlop XLXI_22/y_pos_random_0 has been replicated 1 time(s)
+FlipFlop XLXI_22/y_pos_random_1 has been replicated 1 time(s)
+FlipFlop XLXI_22/y_pos_random_2 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -445,8 +877,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 164
- Flip-Flops                                            : 164
+# Registers                                            : 385
+ Flip-Flops                                            : 385
 
 =========================================================================
 
@@ -475,29 +907,28 @@ Design Statistics
 # IOs                              : 9
 
 Cell Usage :
-# BELS                             : 2310
+# BELS                             : 6651
 #      GND                         : 2
-#      INV                         : 76
-#      LUT1                        : 201
-#      LUT2                        : 461
-#      LUT2_D                      : 10
-#      LUT2_L                      : 1
-#      LUT3                        : 54
-#      LUT3_D                      : 21
-#      LUT3_L                      : 6
-#      LUT4                        : 292
-#      LUT4_D                      : 26
-#      LUT4_L                      : 16
-#      MUXCY                       : 784
-#      MUXF5                       : 7
-#      MUXF6                       : 1
+#      INV                         : 126
+#      LUT1                        : 318
+#      LUT2                        : 1607
+#      LUT2_D                      : 34
+#      LUT2_L                      : 6
+#      LUT3                        : 151
+#      LUT3_D                      : 25
+#      LUT3_L                      : 36
+#      LUT4                        : 1039
+#      LUT4_D                      : 142
+#      LUT4_L                      : 73
+#      MUXCY                       : 2252
+#      MUXF5                       : 28
 #      VCC                         : 2
-#      XORCY                       : 350
-# FlipFlops/Latches                : 243
-#      FD                          : 33
+#      XORCY                       : 810
+# FlipFlops/Latches                : 464
+#      FD                          : 39
 #      FDC                         : 11
 #      FDCE                        : 11
-#      FDE                         : 126
+#      FDE                         : 341
 #      FDR                         : 4
 #      FDRE                        : 45
 #      FDRS                        : 3
@@ -519,10 +950,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      643  out of   4656    13%  
- Number of Slice Flip Flops:            243  out of   9312     2%  
- Number of 4 input LUTs:               1165  out of   9312    12%  
-    Number used as logic:              1164
+ Number of Slices:                     1938  out of   4656    41%  
+ Number of Slice Flip Flops:            464  out of   9312     4%  
+ Number of 4 input LUTs:               3558  out of   9312    38%  
+    Number used as logic:              3557
     Number used as Shift registers:       1
  Number of IOs:                           9
  Number of bonded IOBs:                   9  out of    232     3%  
@@ -549,7 +980,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk_50MHz                          | BUFGP                  | 244   |
+Clk_50MHz                          | BUFGP                  | 465   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -564,9 +995,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 13.531ns (Maximum Frequency: 73.902MHz)
-   Minimum input arrival time before clock: 5.671ns
-   Maximum output required time after clock: 7.888ns
+   Minimum period: 15.328ns (Maximum Frequency: 65.241MHz)
+   Minimum input arrival time before clock: 5.772ns
+   Maximum output required time after clock: 8.082ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -575,79 +1006,77 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 13.531ns (frequency: 73.902MHz)
-  Total number of paths / destination ports: 3801459 / 480
+  Clock period: 15.328ns (frequency: 65.241MHz)
+  Total number of paths / destination ports: 19077726 / 916
 -------------------------------------------------------------------------
-Delay:               13.531ns (Levels of Logic = 28)
-  Source:            XLXI_22/enemies<0>.X_0 (FF)
-  Destination:       XLXI_22/enemies<0>.X_8 (FF)
+Delay:               15.328ns (Levels of Logic = 26)
+  Source:            XLXI_22/enemies<9>.Y_velocity_3 (FF)
+  Destination:       XLXI_22/enemies<9>.X_8 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_22/enemies<0>.X_0 to XLXI_22/enemies<0>.X_8
+  Data Path: XLXI_22/enemies<9>.Y_velocity_3 to XLXI_22/enemies<9>.X_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.514   0.603  XLXI_22/enemies<0>.X_0 (XLXI_22/enemies<0>.X_0)
-     LUT1:I0->O            1   0.612   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<0>_rt (XLXI_22/Madd_current_enemy0.Y_add0000_cy<0>_rt)
-     MUXCY:S->O            1   0.404   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<0> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<1> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<2> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<3> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<4> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<5> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<6> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<6>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<7> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<7>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<8> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<8>)
-     MUXCY:CI->O           0   0.052   0.000  XLXI_22/Madd_current_enemy0.Y_add0000_cy<9> (XLXI_22/Madd_current_enemy0.Y_add0000_cy<9>)
-     XORCY:CI->O          53   0.699   1.109  XLXI_22/Madd_current_enemy0.Y_add0000_xor<10> (XLXI_22/current_enemy0_Y_add0000<10>)
-     LUT4:I2->O            1   0.612   0.000  XLXI_22/Madd_and0006_0_addsub0000_lut<1> (XLXI_22/Madd_and0006_0_addsub0000_lut<1>)
-     MUXCY:S->O            1   0.404   0.000  XLXI_22/Madd_and0006_0_addsub0000_cy<1> (XLXI_22/Madd_and0006_0_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_and0006_0_addsub0000_cy<2> (XLXI_22/Madd_and0006_0_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_and0006_0_addsub0000_cy<3> (XLXI_22/Madd_and0006_0_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_and0006_0_addsub0000_cy<4> (XLXI_22/Madd_and0006_0_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_22/Madd_and0006_0_addsub0000_cy<5> (XLXI_22/Madd_and0006_0_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_22/Madd_and0006_0_addsub0000_cy<6> (XLXI_22/Madd_and0006_0_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_22/Madd_and0006_0_addsub0000_cy<7> (XLXI_22/Madd_and0006_0_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_22/Madd_and0006_0_addsub0000_cy<8> (XLXI_22/Madd_and0006_0_addsub0000_cy<8>)
-     XORCY:CI->O           2   0.699   0.449  XLXI_22/Madd_and0006_0_addsub0000_xor<9> (XLXI_22/and0006_0_addsub0000<9>)
-     LUT2:I1->O            1   0.612   0.000  XLXI_22/Mcompar_and0006_0_cmp_lt0000_lut<9> (XLXI_22/Mcompar_and0006_0_cmp_lt0000_lut<9>)
-     MUXCY:S->O            1   0.752   0.426  XLXI_22/Mcompar_and0006_0_cmp_lt0000_cy<9> (XLXI_22/Mcompar_and0006_0_cmp_lt0000_cy<9>)
-     LUT3:I1->O            3   0.612   0.603  XLXI_22/Mcompar_and0006_0_cmp_lt0000_cy<10> (XLXI_22/Mcompar_and0006_0_cmp_lt0000_cy<10>)
-     LUT4:I0->O           19   0.612   0.925  XLXI_22/enemies<0>_Y_velocity_not00011212_1 (XLXI_22/enemies<0>_Y_velocity_not00011212)
-     LUT4_D:I3->O          5   0.612   0.568  XLXI_22/enemies<0>_X_mux0000<1>2 (XLXI_22/N36)
-     LUT4:I2->O            1   0.612   0.000  XLXI_22/enemies<0>_X_mux0000<8> (XLXI_22/enemies<0>_X_mux0000<8>)
-     FDE:D                     0.268          XLXI_22/enemies<0>.X_8
+     FDE:C->Q             14   0.514   0.919  XLXI_22/enemies<9>.Y_velocity_3 (XLXI_22/enemies<9>.Y_velocity_3)
+     LUT2:I1->O            1   0.612   0.000  XLXI_22/Madd_current_enemy0.X_velocity_add0001_lut<3> (XLXI_22/Madd_current_enemy0.X_velocity_add0001_lut<3>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<3> (XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<4> (XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<5> (XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<6> (XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<7> (XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<8> (XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<8>)
+     MUXCY:CI->O           0   0.052   0.000  XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<9> (XLXI_22/Madd_current_enemy0.X_velocity_add0001_cy<9>)
+     XORCY:CI->O          19   0.699   1.074  XLXI_22/Madd_current_enemy0.X_velocity_add0001_xor<10> (XLXI_22/current_enemy0_X_velocity_add0001<10>)
+     LUT2_D:I0->O         15   0.612   0.867  XLXI_22/enemies<9>_Y_mux0000<10>11_1 (XLXI_22/enemies<9>_Y_mux0000<10>11)
+     LUT4:I3->O            1   0.612   0.000  XLXI_22/Madd_and0004_0_addsub0000_lut<2> (XLXI_22/Madd_and0004_0_addsub0000_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_22/Madd_and0004_0_addsub0000_cy<2> (XLXI_22/Madd_and0004_0_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_and0004_0_addsub0000_cy<3> (XLXI_22/Madd_and0004_0_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_and0004_0_addsub0000_cy<4> (XLXI_22/Madd_and0004_0_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_and0004_0_addsub0000_cy<5> (XLXI_22/Madd_and0004_0_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_and0004_0_addsub0000_cy<6> (XLXI_22/Madd_and0004_0_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_22/Madd_and0004_0_addsub0000_cy<7> (XLXI_22/Madd_and0004_0_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_22/Madd_and0004_0_addsub0000_cy<8> (XLXI_22/Madd_and0004_0_addsub0000_cy<8>)
+     MUXCY:CI->O           0   0.051   0.000  XLXI_22/Madd_and0004_0_addsub0000_cy<9> (XLXI_22/Madd_and0004_0_addsub0000_cy<9>)
+     XORCY:CI->O           2   0.699   0.449  XLXI_22/Madd_and0004_0_addsub0000_xor<10> (XLXI_22/and0004_0_addsub0000<10>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_22/Mcompar_and0004_0_cmp_gt0000_lut<10> (XLXI_22/Mcompar_and0004_0_cmp_gt0000_lut<10>)
+     MUXCY:S->O            1   0.752   0.387  XLXI_22/Mcompar_and0004_0_cmp_gt0000_cy<10> (XLXI_22/Mcompar_and0004_0_cmp_gt0000_cy<10>)
+     LUT4_D:I2->O         14   0.612   0.919  XLXI_22/game_state_IS_GAME_OVER_0_not000132211 (XLXI_22/N231)
+     LUT2:I1->O           13   0.612   0.839  XLXI_22/enemies<9>_X_and00001 (XLXI_22/enemies<9>_X_and0000)
+     LUT4_D:I3->O          5   0.612   0.568  XLXI_22/enemies<9>_X_mux0000<1>1 (XLXI_22/N129)
+     LUT4:I2->O            1   0.612   0.000  XLXI_22/enemies<9>_X_mux0000<8> (XLXI_22/enemies<9>_X_mux0000<8>)
+     FDE:D                     0.268          XLXI_22/enemies<9>.X_8
     ----------------------------------------
-    Total                     13.531ns (8.848ns logic, 4.683ns route)
-                                       (65.4% logic, 34.6% route)
+    Total                     15.328ns (9.306ns logic, 6.022ns route)
+                                       (60.7% logic, 39.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 70 / 70
+  Total number of paths / destination ports: 285 / 285
 -------------------------------------------------------------------------
-Offset:              5.671ns (Levels of Logic = 3)
+Offset:              5.772ns (Levels of Logic = 3)
   Source:            btn_south (PAD)
-  Destination:       XLXI_22/enemies<1>.X_velocity_3 (FF)
+  Destination:       XLXI_22/enemies<8>.Y_velocity_3 (FF)
   Destination Clock: Clk_50MHz rising
 
-  Data Path: btn_south to XLXI_22/enemies<1>.X_velocity_3
+  Data Path: btn_south to XLXI_22/enemies<8>.Y_velocity_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            37   1.106   1.143  btn_south_IBUF (btn_south_IBUF)
-     LUT4:I1->O           46   0.612   1.146  XLXI_22/enemies<0>_Y_velocity_not000121 (XLXI_22/enemies<1>_X_not0001)
-     LUT4:I1->O            6   0.612   0.569  XLXI_22/enemies<1>_Y_velocity_not00011 (XLXI_22/enemies<1>_Y_velocity_not0001)
-     FDE:CE                    0.483          XLXI_22/enemies<1>.Y_velocity_2
+     LUT4:I1->O          230   0.612   1.278  XLXI_22/enemies<0>_Y_velocity_not000121 (XLXI_22/enemies<9>_X_not0001)
+     LUT4:I0->O            5   0.612   0.538  XLXI_22/enemies<8>_X_velocity_not00011 (XLXI_22/enemies<8>_X_velocity_not0001)
+     FDE:CE                    0.483          XLXI_22/enemies<8>.X_velocity_1
     ----------------------------------------
-    Total                      5.671ns (2.813ns logic, 2.858ns route)
-                                       (49.6% logic, 50.4% route)
+    Total                      5.772ns (2.813ns logic, 2.959ns route)
+                                       (48.7% logic, 51.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
   Total number of paths / destination ports: 37 / 7
 -------------------------------------------------------------------------
-Offset:              7.888ns (Levels of Logic = 10)
+Offset:              8.082ns (Levels of Logic = 10)
   Source:            XLXI_5/vcs_0 (FF)
   Destination:       VGA_VS (PAD)
   Source Clock:      Clk_50MHz rising
@@ -656,7 +1085,7 @@ Offset:              7.888ns (Levels of Logic = 10)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            16   0.514   1.031  XLXI_5/vcs_0 (XLXI_5/vcs_0)
+     FDCE:C->Q            32   0.514   1.225  XLXI_5/vcs_0 (XLXI_5/vcs_0)
      LUT1:I0->O            1   0.612   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_rt (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>_rt)
      MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<0>)
      MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1> (XLXI_5/Mcompar_v_sync_cmp_ge0000_cy<1>)
@@ -668,20 +1097,20 @@ Offset:              7.888ns (Levels of Logic = 10)
      LUT2:I0->O            2   0.612   0.380  XLXI_5/v_sync1 (VGA_VS_OBUF)
      OBUF:I->O                 3.169          VGA_VS_OBUF (VGA_VS)
     ----------------------------------------
-    Total                      7.888ns (5.968ns logic, 1.920ns route)
-                                       (75.7% logic, 24.3% route)
+    Total                      8.082ns (5.968ns logic, 2.114ns route)
+                                       (73.8% logic, 26.2% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.95 secs
+Total REAL time to Xst completion: 42.00 secs
+Total CPU time to Xst completion: 42.96 secs
  
 --> 
 
-Total memory usage is 221680 kilobytes
+Total memory usage is 281328 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   30 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :  133 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
 

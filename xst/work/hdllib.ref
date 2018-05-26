@@ -1,8 +1,8 @@
-AR player_movement behavioral C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd sub00/vhpl03 1526908828
-AR vga_800x600 behavioral C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd sub00/vhpl01 1526908826
-EN scheme NULL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf sub00/vhpl06 1526908831
-AR scheme behavioral C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf sub00/vhpl07 1526908832
-EN vga_800x600 NULL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd sub00/vhpl00 1526908825
-AR vga_pixel behavioral C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd sub00/vhpl05 1526908830
-EN player_movement NULL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd sub00/vhpl02 1526908827
-EN vga_pixel NULL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd sub00/vhpl04 1526908829
+AR player_movement behavioral "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/player_movement.vhd" sub00/vhpl03 1527147886
+AR vga_800x600 behavioral "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_800x600.vhd" sub00/vhpl01 1527147884
+EN scheme NULL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" sub00/vhpl06 1527147889
+AR scheme behavioral "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" sub00/vhpl07 1527147890
+EN vga_800x600 NULL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_800x600.vhd" sub00/vhpl00 1527147883
+AR vga_pixel behavioral "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd" sub00/vhpl05 1527147888
+EN player_movement NULL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/player_movement.vhd" sub00/vhpl02 1527147885
+EN vga_pixel NULL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd" sub00/vhpl04 1527147887

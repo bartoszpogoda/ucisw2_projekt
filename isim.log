@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\lab\Desktop\ucisw2_projekt-master\zajecia\ucisw_projekt\vga_controller_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/lab/Desktop/ucisw2_projekt-master/zajecia/ucisw_projekt/vga_controller_test_isim_beh.wdb 
+Running: C:\Users\lab\Desktop\PogMar\ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia\vga_controller_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_controller_test_isim_beh.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -14,18 +14,23 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 40000ps
+# run 35 ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 40000ns
+# run 35 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 400000ns
-# run 4000000ns
-# run 4000000ns
-# run 4000000ns
-# run 400000ns
-# run 400000ns
-# run 400000ns
-# run 400000ns
+# run 35 ns
+# run 35 ns
+# run 35 ns
+# run 3500 ns
+# run 3500 ns
+# run 3500 ns
+# run 3500 ns
+# run 3500 ns
+# run 3500 ns
+# restart
+# run 21000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

@@ -1,36 +1,40 @@
-V3 21
+V3 25
+FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/player_movement.vhd" 2018/05/21.14:04:13 P.20131013
+EN work/player_movement 1527147885 \
+      FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/player_movement.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/player_movement/Behavioral 1527147886 \
+      FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/player_movement.vhd" \
+      EN work/player_movement 1527147885
+FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" 2018/05/21.15:08:38 P.20131013
+EN work/SCHEME 1527147889 \
+      FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/SCHEME/BEHAVIORAL 1527147890 \
+      FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/SCHEME.vhf" \
+      EN work/SCHEME 1527147889 CP vga_800x600 CP PS2_Mouse CP player_movement \
+      CP vga_pixel
+FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_800x600.vhd" 2018/05/20.11:04:46 P.20131013
+EN work/vga_800x600 1527147883 \
+      FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_800x600.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/vga_800x600/Behavioral 1527147884 \
+      FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_800x600.vhd" \
+      EN work/vga_800x600 1527147883
+FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd" 2018/05/24.09:44:40 P.20131013
+EN work/vga_pixel 1527147887 \
+      FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/vga_pixel/Behavioral 1527147888 \
+      FL "C:/Users/lab/Desktop/PogMar/ucisw2_projekt-master-21-05-3-cmmit-PiotrekIdzieDoDomuXD Kopia/vga_pixel.vhd" \
+      EN work/vga_pixel 1527147887
 FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-1-commit/player_movement.vhd 2018/05/21.14:04:13 P.20131013
 FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-1-commit/SCHEME.vhf 2018/05/21.15:08:38 P.20131013
 FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-1-commit/vga_800x600.vhd 2018/05/20.11:04:46 P.20131013
 FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-1-commit/vga_pixel.vhd 2018/05/21.15:12:02 P.20131013
 FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd 2018/05/21.14:04:13 P.20131013
-EN work/player_movement 1526908827 \
-      FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/player_movement/Behavioral 1526908828 \
-      FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/player_movement.vhd \
-      EN work/player_movement 1526908827
 FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf 2018/05/21.15:08:38 P.20131013
-EN work/SCHEME 1526908831 \
-      FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf \
-      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
-      PH unisim/VCOMPONENTS 1381692182
-AR work/SCHEME/BEHAVIORAL 1526908832 \
-      FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/SCHEME.vhf \
-      EN work/SCHEME 1526908831 CP vga_800x600 CP PS2_Mouse CP player_movement \
-      CP vga_pixel
 FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd 2018/05/20.11:04:46 P.20131013
-EN work/vga_800x600 1526908825 \
-      FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/NUMERIC_STD 1381692181
-AR work/vga_800x600/Behavioral 1526908826 \
-      FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_800x600.vhd \
-      EN work/vga_800x600 1526908825
 FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd 2018/05/21.15:20:19 P.20131013
-EN work/vga_pixel 1526908829 \
-      FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/vga_pixel/Behavioral 1526908830 \
-      FL C:/Users/lab/Desktop/ucisw2_projekt-master-21-05-2-cmmitKopia/vga_pixel.vhd \
-      EN work/vga_pixel 1526908829

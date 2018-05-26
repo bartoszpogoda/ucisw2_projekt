@@ -1,0 +1,11 @@
+select figure at 2215 1444 8 -branches -sn=1
+select figure at 2302 1643 8 -branches -sn=1
+select figure at 1537 1111 8 -branches -sn=1
+select figure at 2376 1876 8 -branches -sn=1
+select figure at 1478 1079 8 -branches -sn=1
+select figure at 1832 784 8 -branches -sn=1
+select figure at 1571 1982 8 -branches -sn=1
+select figure at 2584 1969 8 -branches -sn=1
+select figure at 3375 1507 8 -branches -sn=1
+select figure at 3347 1522 8 -branches -sn=1
+select all in 3121 1522 3347 1897 -branches -enclosed -sn=1

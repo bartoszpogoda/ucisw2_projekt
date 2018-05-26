@@ -70,7 +70,7 @@ architecture Behavioral of vga_pixel is
       width : signed(10 downto 0);
       height : signed(10 downto 0);
    end record;
-   type ENEMIES_ARR is array (1 downto 0) of ENEMY_TYPE; 
+   type ENEMIES_ARR is array (9 downto 0) of ENEMY_TYPE; 
 
    constant player_size : std_logic_vector(10 downto 0) := "00000011110";
    constant player_detail_base_size : signed(10 downto 0) := "00000000110";
@@ -87,20 +87,103 @@ architecture Behavioral of vga_pixel is
       Y => "00000001000",
       X_velocity => "0010",
       Y_velocity => "0010",
-      width => "00000001010",
-      height =>  "00000001010"
+      width => "00000001100",
+      height =>  "00000001100"
    );
    
    constant enemy_2 : ENEMY_TYPE := ( 
       X => "00000001000",
+      Y => "00001001000",
+      X_velocity => "0001",
+      Y_velocity => "0010",
+      width => "00000001100",
+      height =>  "00000001100"
+   );
+   
+   constant enemy_3 : ENEMY_TYPE := ( 
+      X => "00001001000",
+      Y => "00000001000",
+      X_velocity => "0010",
+      Y_velocity => "0010",
+      width => "00000001100",
+      height =>  "00000001100"
+   );
+   
+   constant enemy_4 : ENEMY_TYPE := ( 
+      X => "00000001000",
+      Y => "00000011000",
+      X_velocity => "0001",
+      Y_velocity => "0010",
+      width => "00000001100",
+      height =>  "00000001100"
+   );
+   
+   constant enemy_5 : ENEMY_TYPE := ( 
+      X => "01111000000",
       Y => "00000001000",
       X_velocity => "0001",
       Y_velocity => "0010",
       width => "00000001100",
-      height =>  "00000001010"
+      height =>  "00000001100"
    );
    
-   signal enemies : ENEMIES_ARR := (0 => enemy_1, 1 => enemy_2); 
+   constant enemy_6 : ENEMY_TYPE := ( 
+      X => "00000001000",
+      Y => "01110001000",
+      X_velocity => "0001",
+      Y_velocity => "0010",
+      width => "00000001100",
+      height =>  "00000001100"
+   );
+   
+   constant enemy_7 : ENEMY_TYPE := ( 
+      X => "00010001000",
+      Y => "00110001000",
+      X_velocity => "0001",
+      Y_velocity => "0010",
+      width => "00000001100",
+      height =>  "00000001100"
+   );
+   
+   constant enemy_8 : ENEMY_TYPE := ( 
+      X => "01000001000",
+      Y => "00011001000",
+      X_velocity => "0001",
+      Y_velocity => "0010",
+      width => "00000001100",
+      height =>  "00000001100"
+   );
+   
+   constant enemy_9 : ENEMY_TYPE := ( 
+      X => "00001101000",
+      Y => "01000001000",
+      X_velocity => "0001",
+      Y_velocity => "0010",
+      width => "00000001100",
+      height =>  "00000001100"
+   );
+   
+   constant enemy_10 : ENEMY_TYPE := ( 
+      X => "11000001000",
+      Y => "00000001011",
+      X_velocity => "0001",
+      Y_velocity => "0010",
+      width => "00000001100",
+      height =>  "00000001100"
+   );
+   
+   signal enemies : ENEMIES_ARR := (
+      0 => enemy_1, 
+      1 => enemy_2, 
+      2 => enemy_3, 
+      3 => enemy_4, 
+      4 => enemy_5, 
+      5 => enemy_6, 
+      6 => enemy_7, 
+      7 => enemy_8, 
+      8 => enemy_9,
+      9 => enemy_10
+   ); 
    signal in_red_out : std_logic := '0';
    signal in_green_out : std_logic := '0';
    signal in_blue_out : std_logic := '0';
@@ -108,6 +191,7 @@ architecture Behavioral of vga_pixel is
    -- random counters
    signal x_pos_random : SIGNED(10 downto 0) := "01100100000";
    signal y_pos_random : SIGNED(10 downto 0) := "01100100000";
+   signal c_random : SIGNED(10 downto 0) := "01100100000";
    
    function RESPAWN_ENEMY( current_enemy : ENEMY_TYPE ; x_pos_random : SIGNED(10 downto 0) ; y_pos_random : SIGNED(10 downto 0))
       return ENEMY_TYPE is
@@ -122,14 +206,17 @@ architecture Behavioral of vga_pixel is
       enemy.X_velocity := current_enemy.X_velocity;
       enemy.Y_velocity := current_enemy.Y_velocity;
       
-      if x_pos_random mod 2 = 1 then
+      if x_pos_random mod 4 = 1 then
          enemy.X_velocity := -enemy.X_velocity;
+      end if;
+      
+      if y_pos_random mod 8 = 1 then
          enemy.Y_velocity := -enemy.Y_velocity;
       end if;
       
       -- going right bottom corner direction
       if enemy.X_velocity > 0 and enemy.Y_velocity > 0 then
-         if x_pos_random mod 2 = 1 then
+         if c_random mod 2 = 1 then
             enemy.Y := "00000000001"; -- 1
          else
             enemy.X := "00000000001"; -- 1
@@ -138,7 +225,7 @@ architecture Behavioral of vga_pixel is
       
       -- going right top corner direction
       if enemy.X_velocity > 0 and enemy.Y_velocity < 0 then
-         if x_pos_random mod 2 = 1 then
+         if c_random mod 2 = 1 then
             enemy.Y := "01001011000"; -- 600
          else
             enemy.X := "00000000001"; -- 1
@@ -147,7 +234,7 @@ architecture Behavioral of vga_pixel is
       
       -- going left bottom corner direction
       if enemy.X_velocity < 0 and enemy.Y_velocity > 0 then
-         if x_pos_random mod 2 = 1 then
+         if c_random mod 2 = 1 then
             enemy.Y := "00000000001"; -- 1
          else
             enemy.X := "01100011111"; -- 799
@@ -156,7 +243,7 @@ architecture Behavioral of vga_pixel is
       
       -- going left top corner direction
       if enemy.X_velocity < 0 and enemy.Y_velocity < 0 then
-         if x_pos_random mod 2 = 1 then
+         if c_random mod 2 = 1 then
             enemy.Y := "01001011000"; -- 600
          else
             enemy.X := "01100011111"; -- 799
@@ -188,10 +275,12 @@ begin
       
          x_pos_random <= x_pos_random + "00000000001"; -- + 1
          y_pos_random <= y_pos_random + "00000000001"; -- + 1
+         c_random <= c_random + "00000000001"; -- + 1
          
          if DataRdy = '1' then
             x_pos_random <= x_pos_random + "00000000011"; -- + 3
             y_pos_random <= y_pos_random + "00000000111"; -- + 7
+            c_random <= c_random + "000000001111"; -- + 15
          end if;
       end if;
    end process;
@@ -257,7 +346,7 @@ begin
             end if;
 
             -- draw enemies
-            for I in 0 to 1 loop
+            for I in enemies'range loop
                current_enemy := enemies(I);
 
                if signed(h_counter) > current_enemy.X and signed(h_counter) < current_enemy.X + current_enemy.width then
@@ -286,7 +375,7 @@ begin
                game_state.IS_GAME_OVER <= false;
             elsif not game_state.IS_GAME_OVER and v_sync = '1' and h_counter = "01100011111" and v_counter = "01001010111" then -- 799x599
          
-               for I in 0 to 1 loop
+               for I in enemies'range loop
                   current_enemy := enemies(I);
                   
                   current_enemy.X := current_enemy.X + current_enemy.X_velocity;

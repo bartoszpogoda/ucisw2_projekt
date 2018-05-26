@@ -1,0 +1,28 @@
+Command line:
+   vga_800x600_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49264
+
+Thu May 24 08:28:23 2018
+
+
+ Elaboration Time: 0.078 sec
+
+ Current Memory Usage: 811.082 Meg
+
+ Total Signals          : 10
+ Total Nets             : 50
+ Total Signal Drivers   : 8
+ Total Blocks           : 5
+ Total Primitive Blocks : 5
+ Total Processes        : 7
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 617
+
+ Total Simulation Time: 0.1248 sec
+
+ Current Memory Usage: 1125.65 Meg
+
+Thu May 24 08:28:59 2018
+
