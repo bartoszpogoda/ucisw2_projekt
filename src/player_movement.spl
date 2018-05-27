@@ -1,0 +1,11 @@
+[Inputs]
+clk50
+DataRdy
+=B1_Status[7:0]=
+=B2_X[7:0]=
+=B3_Y[7:0]=
+[Outputs]
+player_action_ready
+=player_x[10:0]=
+=player_y[10:0]=
+[BiDir]

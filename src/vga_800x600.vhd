@@ -42,7 +42,7 @@ end vga_800x600;
 
 architecture Behavioral of vga_800x600 is
 
---porches
+	 -- breakpoint values with porches applied
     constant H_pixels : std_logic_vector(10 downto 0) := "10000010000"; -- 1040 (64 + 120 + 800 + 56)   
     constant H_before_sync :std_logic_vector(10 downto 0) := "01101011000"; --(800 + 56)
     constant H_after_sync :std_logic_vector(10 downto 0) := "01111010000"; --(800 + 56 + 120)

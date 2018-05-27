@@ -1,0 +1,5 @@
+vhdtdtfi -lib work vga_pixel.vhd -prj ucisw_projekt -o game_controller.spl -module game_controller -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work vga_pixel.vhd -prj ucisw_projekt -o game_controller.spl -module game_controller -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e game_controller.spl C:/Users/BPOGODA/Desktop/ucisw2_projekt-master/ucisw2_projekt-master/src/game_controller.sym 
+vhdtdtfi -lib work game_controller.vhd -prj ucisw_projekt -o game_controller.spl -module game_controller -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e game_controller.spl C:/Users/BPOGODA/Desktop/ucisw2_projekt-master/ucisw2_projekt-master/src/game_controller.sym 

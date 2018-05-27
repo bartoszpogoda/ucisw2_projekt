@@ -35,7 +35,6 @@ entity player_movement is
 
         player_x : out std_logic_vector(10 downto 0);
         player_y : out std_logic_vector(10 downto 0);
-        player_action : out std_logic_vector(2 downto 0);
 
         player_action_ready : out std_logic
     );
@@ -51,7 +50,7 @@ architecture Behavioral of player_movement is
     -- player action
     signal player_action_counter : UNSIGNED(27 downto 0) := (others => '0');
     constant player_action_counter_max : UNSIGNED(27 downto 0) := to_unsigned(250000000, 28);
-    signal in_player_action_ready : std_logic := '0';
+    signal in_player_action_ready : std_logic := '1';
 
     -- player movement area boundaries
     constant player_x_lower_bound : SIGNED(10 downto 0) := "00011001000"; --200 
@@ -83,9 +82,8 @@ begin
                in_player_y <= in_player_y - dash_distance;
                in_player_action_ready <= '0';
             end if;
-         end if;
-        
-         if in_player_action_ready = '0' then
+         else
+				-- player action not ready - loading logic
             player_action_counter <= player_action_counter + 1;
 
             if player_action_counter = player_action_counter_max then
@@ -133,7 +131,6 @@ begin
     -- output internals
     player_x <= std_logic_vector(in_player_x);
     player_y <= std_logic_vector(in_player_y);
-    player_action <= std_logic_vector(in_player_action);
     
     player_action_ready <= in_player_action_ready;
 

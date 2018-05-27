@@ -1,0 +1,29 @@
+Command line:
+   game_controller_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55838
+
+Sun May 27 11:58:18 2018
+
+
+ Elaboration Time: 0.1404 sec
+
+ Current Memory Usage: 668.373 Meg
+
+ Total Signals          : 45
+ Total Nets             : 637
+ Total Signal Drivers   : 22
+ Total Blocks           : 7
+ Total Primitive Blocks : 6
+ Total Processes        : 12
+ Total Traceable Variables  : 35
+ Total Scalar Nets and Variables : 1758
+Total Line Count : 77
+
+ Total Simulation Time: 0.171601 sec
+
+ Current Memory Usage: 668.373 Meg
+
+Sun May 27 11:58:21 2018
+

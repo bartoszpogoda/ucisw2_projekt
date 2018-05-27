@@ -1,0 +1,3 @@
+vhdl work "vga_800x600.vhd"
+vhdl work "game_controller.vhd"
+vhdl work "game_controller_test_static.vhd"

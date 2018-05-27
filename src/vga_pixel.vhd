@@ -4,7 +4,7 @@
 -- 
 -- Create Date:    08:45:58 04/12/2018 
 -- Design Name: 
--- Module Name:    vga_pixel - Behavioral 
+-- Module Name:    game_controller - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,7 +29,7 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity vga_pixel is
+entity game_controller is
    Port (
         clk50 : in std_logic;
         
@@ -50,9 +50,9 @@ entity vga_pixel is
         
         reset : in std_logic
     );
-end vga_pixel;
+end game_controller;
 
-architecture Behavioral of vga_pixel is
+architecture Behavioral of game_controller is
    type GAMESTATE_TYPE is
    record
       IS_PLAYER_COLLISION : boolean;
